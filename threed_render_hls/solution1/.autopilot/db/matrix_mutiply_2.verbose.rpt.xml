@@ -1,0 +1,158 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'matrix_mutiply_2'" level="0">
+<item name = "Date">Tue Jul 18 18:12:16 2023
+</item>
+<item name = "Version">2022.2.2 (Build 3779808 on Feb 17 2023)</item>
+<item name = "Project">threed_render_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.912 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">81, 81, 0.810 us, 0.810 us, 81, 81, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 144, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 12, 2928, 1692, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 449, -</column>
+<column name="Register">-, -, 598, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 5, 3, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_40s_34ns_73_2_1_U105">mul_40s_34ns_73_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_35ns_73_2_1_U106">mul_40s_35ns_73_2_1, 0, 4, 197, 81, 0</column>
+<column name="mul_40s_40s_73_2_1_U104">mul_40s_40s_73_2_1, 0, 4, 197, 81, 0</column>
+<column name="mux_32_40_1_1_U101">mux_32_40_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_40_1_1_U102">mux_32_40_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_40_1_1_U103">mux_32_40_1_1, 0, 0, 0, 14, 0</column>
+<column name="sdiv_73ns_40s_40_77_seq_1_U107">sdiv_73ns_40s_40_77_seq_1, 0, 0, 779, 469, 0</column>
+<column name="sdiv_73ns_40s_40_77_seq_1_U108">sdiv_73ns_40s_40_77_seq_1, 0, 0, 779, 469, 0</column>
+<column name="sdiv_73ns_40s_40_77_seq_1_U109">sdiv_73ns_40s_40_77_seq_1, 0, 0, 779, 469, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln13_fu_375_p2">+, 0, 0, 13, 10, 1</column>
+<column name="add_ln14_fu_393_p2">+, 0, 0, 13, 10, 2</column>
+<column name="add_ln16_fu_343_p2">+, 0, 0, 12, 11, 11</column>
+<column name="ret_V_fu_276_p2">+, 0, 0, 80, 73, 64</column>
+<column name="sub_ln16_1_fu_365_p2">-, 0, 0, 13, 10, 10</column>
+<column name="sub_ln16_fu_333_p2">-, 0, 0, 13, 10, 10</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">421, 83, 1, 83</column>
+<column name="output_vector_address0">14, 3, 10, 30</column>
+<column name="output_vector_d0">14, 3, 40, 120</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">82, 0, 82, 0</column>
+<column name="r_V_40_reg_412">40, 0, 40, 0</column>
+<column name="r_V_43_reg_455">73, 0, 73, 0</column>
+<column name="r_V_44_reg_417">40, 0, 40, 0</column>
+<column name="r_V_reg_407">40, 0, 40, 0</column>
+<column name="sdiv_ln1303_1_reg_492">40, 0, 40, 0</column>
+<column name="sdiv_ln1303_2_reg_497">40, 0, 40, 0</column>
+<column name="sdiv_ln1303_reg_487">40, 0, 40, 0</column>
+<column name="sext_ln1270_8_reg_437">73, 0, 73, 0</column>
+<column name="sub_ln16_1_reg_480">10, 0, 10, 0</column>
+<column name="tmp_17_reg_450">40, 0, 40, 0</column>
+<column name="tmp_18_reg_470">40, 0, 40, 0</column>
+<column name="tmp_s_reg_445">40, 0, 40, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, matrix_mutiply.2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, matrix_mutiply.2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, matrix_mutiply.2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, matrix_mutiply.2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, matrix_mutiply.2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, matrix_mutiply.2, return value</column>
+<column name="p_read">in, 40, ap_none, p_read, scalar</column>
+<column name="p_read1">in, 40, ap_none, p_read1, scalar</column>
+<column name="p_read2">in, 40, ap_none, p_read2, scalar</column>
+<column name="p_read3">in, 40, ap_none, p_read3, scalar</column>
+<column name="p_read4">in, 40, ap_none, p_read4, scalar</column>
+<column name="p_read5">in, 40, ap_none, p_read5, scalar</column>
+<column name="p_read6">in, 40, ap_none, p_read6, scalar</column>
+<column name="p_read7">in, 40, ap_none, p_read7, scalar</column>
+<column name="p_read8">in, 40, ap_none, p_read8, scalar</column>
+<column name="input_vector_offset">in, 2, ap_none, input_vector_offset, scalar</column>
+<column name="p_read9">in, 40, ap_none, p_read9, scalar</column>
+<column name="output_vector_address0">out, 10, ap_memory, output_vector, array</column>
+<column name="output_vector_ce0">out, 1, ap_memory, output_vector, array</column>
+<column name="output_vector_we0">out, 1, ap_memory, output_vector, array</column>
+<column name="output_vector_d0">out, 40, ap_memory, output_vector, array</column>
+<column name="output_vector_address1">out, 10, ap_memory, output_vector, array</column>
+<column name="output_vector_ce1">out, 1, ap_memory, output_vector, array</column>
+<column name="output_vector_we1">out, 1, ap_memory, output_vector, array</column>
+<column name="output_vector_d1">out, 40, ap_memory, output_vector, array</column>
+<column name="output_vector_offset">in, 7, ap_none, output_vector_offset, scalar</column>
+<column name="output_vector_offset2">in, 2, ap_none, output_vector_offset2, scalar</column>
+</table>
+</item>
+</section>
+</profile>

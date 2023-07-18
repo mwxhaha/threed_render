@@ -1,0 +1,7 @@
+Running: xsim.dir/threed_render_hls/xsimk.exe -simmode gui -wdb threed_render_hls.wdb -simrunnum 0 -socket 57938
+Design successfully loaded
+Design Loading Memory Usage: 14516 KB (Peak: 14516 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 60272 KB (Peak: 60272 KB)
+Simulation CPU Usage: 1218218 ms

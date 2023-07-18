@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Tue Jul 18 19:07:37 2023
+# Process ID: 48472
+# Current directory: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/impl/ip/vivado.log
+# Journal file: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/impl/ip\vivado.jou
+# Running On: LAPTOP-KMQA6IKR, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16800 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

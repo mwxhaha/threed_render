@@ -1,0 +1,426 @@
+
+
+================================================================
+== Synthesis Summary Report of 'threed_render_hls'
+================================================================
++ General Information: 
+    * Date:           Tue Jul 18 18:12:26 2023
+    * Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+    * Project:        threed_render_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+-------------+-----+
+    |                  Modules                 |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |           |             |             |     |
+    |                  & Loops                 |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP    |      FF     |     LUT     | URAM|
+    +------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+-------------+-----+
+    |+ threed_render_hls                       |  Timing|  -0.85|  8696999|  8.697e+07|         -|  8697000|     -|        no|  90 (32%)|  136 (61%)|  26988 (25%)|  29599 (55%)|    -|
+    | + rotation_matrix_initial                |       -|   0.18|       54|    540.000|         -|       54|     -|        no|         -|    12 (5%)|    2036 (1%)|    3397 (6%)|    -|
+    |  + sin_or_cos_float_s                    |       -|   0.18|       31|    310.000|         -|       31|     -|        no|         -|     9 (4%)|    1705 (1%)|    2875 (5%)|    -|
+    |   + sin_or_cos_float_Pipeline_1          |       -|   4.15|        4|     40.000|         -|        4|     -|        no|         -|          -|     68 (~0%)|    141 (~0%)|    -|
+    |    o Loop 1                              |       -|   7.30|        2|     20.000|         1|        1|     2|       yes|         -|          -|            -|            -|    -|
+    |   + sin_or_cos_float_Pipeline_2          |       -|   0.59|        5|     50.000|         -|        5|     -|        no|         -|          -|    135 (~0%)|    509 (~0%)|    -|
+    |    o Loop 1                              |       -|   7.30|        3|     30.000|         2|        1|     2|       yes|         -|          -|            -|            -|    -|
+    | o threed_render_mesh_i                   |       -|   7.30|     8800|  8.800e+04|        80|        -|   110|        no|         -|          -|            -|            -|    -|
+    |  o threed_render_mesh_j                  |       -|   7.30|       78|    780.000|        26|        -|     3|        no|         -|          -|            -|            -|    -|
+    |   o threed_render_mesh_k                 |       -|   7.30|       24|    240.000|         8|        -|     3|        no|         -|          -|            -|            -|    -|
+    | o threed_render_mesh_after_projection_i  |       -|   7.30|    44550|  4.455e+05|       405|        -|   110|        no|         -|          -|            -|            -|    -|
+    |  + matrix_mutiply                        |       -|   0.39|        5|     50.000|         -|        5|     -|        no|         -|    16 (7%)|    1536 (1%)|    1046 (1%)|    -|
+    |  + matrix_mutiply_1                      |       -|   0.17|        3|     30.000|         -|        3|     -|        no|         -|   28 (12%)|    2374 (2%)|    1387 (2%)|    -|
+    |  + matrix_mutiply_2                      |       -|   0.39|       81|    810.000|         -|       81|     -|        no|         -|    12 (5%)|    3526 (3%)|    2285 (4%)|    -|
+    | o threed_render_screen_0_j               |       -|   7.30|    10200|  1.020e+05|       102|        -|   100|        no|         -|          -|            -|            -|    -|
+    |  o threed_render_screen_0_k              |       -|   7.30|      100|  1.000e+03|         1|        -|   100|        no|         -|          -|            -|            -|    -|
+    | o threed_render_screen_1_i               |       -|   7.30|  8562730|  8.563e+07|     77843|        -|   110|        no|         -|          -|            -|            -|    -|
+    |  o threed_render_screen_1_j              |       -|   7.30|    77838|  7.784e+05|       778|        -|   100|        no|         -|          -|            -|            -|    -|
+    |   o threed_render_screen_1_k             |       -|   7.30|      700|  7.000e+03|         7|        -|   100|        no|         -|          -|            -|            -|    -|
+    | o threed_render_screen_transmission_j    |       -|   7.30|    70200|  7.020e+05|       702|        -|   100|        no|         -|          -|            -|            -|    -|
+    |  o threed_render_screen_transmission_k   |       -|   7.30|      700|  7.000e+03|         7|        -|   100|        no|         -|          -|            -|            -|    -|
+    +------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++----------------------------+------------+---------------+--------+----------+
+| Interface                  | Data Width | Address Width | Offset | Register |
++----------------------------+------------+---------------+--------+----------+
+| s_axi_control              | 32         | 6             | 16     | 0        |
+| s_axi_threed_render_hls_io | 32         | 7             | 16     | 0        |
++----------------------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++----------------------------+-----------------------+--------+-------+--------+--------------------------------------+----------------------------------------------------------------------+
+| Interface                  | Register              | Offset | Width | Access | Description                          | Bit Fields                                                           |
++----------------------------+-----------------------+--------+-------+--------+--------------------------------------+----------------------------------------------------------------------+
+| s_axi_control              | mesh_transmission_1   | 0x10   | 32    | W      | Data signal of mesh_transmission     |                                                                      |
+| s_axi_control              | mesh_transmission_2   | 0x14   | 32    | W      | Data signal of mesh_transmission     |                                                                      |
+| s_axi_control              | screen_transmission_1 | 0x1c   | 32    | W      | Data signal of screen_transmission   |                                                                      |
+| s_axi_control              | screen_transmission_2 | 0x20   | 32    | W      | Data signal of screen_transmission   |                                                                      |
+| s_axi_threed_render_hls_io | CTRL                  | 0x00   | 32    | RW     | Control signals                      | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_threed_render_hls_io | GIER                  | 0x04   | 32    | RW     | Global Interrupt Enable Register     | 0=Enable                                                             |
+| s_axi_threed_render_hls_io | IP_IER                | 0x08   | 32    | RW     | IP Interrupt Enable Register         | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_threed_render_hls_io | IP_ISR                | 0x0c   | 32    | RW     | IP Interrupt Status Register         | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_threed_render_hls_io | triangle_number       | 0x10   | 32    | W      | Data signal of triangle_number       |                                                                      |
+| s_axi_threed_render_hls_io | screen_height         | 0x18   | 32    | W      | Data signal of screen_height         |                                                                      |
+| s_axi_threed_render_hls_io | screen_width          | 0x20   | 32    | W      | Data signal of screen_width          |                                                                      |
+| s_axi_threed_render_hls_io | rotation_x_theta      | 0x28   | 32    | W      | Data signal of rotation_x_theta      |                                                                      |
+| s_axi_threed_render_hls_io | rotation_y_theta      | 0x30   | 32    | W      | Data signal of rotation_y_theta      |                                                                      |
+| s_axi_threed_render_hls_io | rotation_z_theta      | 0x38   | 32    | W      | Data signal of rotation_z_theta      |                                                                      |
+| s_axi_threed_render_hls_io | distance_transmission | 0x40   | 32    | W      | Data signal of distance_transmission |                                                                      |
++----------------------------+-----------------------+--------+-------+--------+--------------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------------+-----------+---------------+
+| Argument              | Direction | Datatype      |
++-----------------------+-----------+---------------+
+| mesh_transmission     | inout     | float*        |
+| triangle_number       | in        | unsigned char |
+| screen_transmission   | inout     | float*        |
+| screen_height         | in        | unsigned char |
+| screen_width          | in        | unsigned char |
+| rotation_x_theta      | in        | float         |
+| rotation_y_theta      | in        | float         |
+| rotation_z_theta      | in        | float         |
+| distance_transmission | in        | float         |
++-----------------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------------------+----------------------------+-----------+----------+-------------------------------------------------+
+| Argument              | HW Interface               | HW Type   | HW Usage | HW Info                                         |
++-----------------------+----------------------------+-----------+----------+-------------------------------------------------+
+| mesh_transmission     | m_axi_gmem                 | interface |          |                                                 |
+| mesh_transmission     | s_axi_control              | register  | offset   | name=mesh_transmission_1 offset=0x10 range=32   |
+| mesh_transmission     | s_axi_control              | register  | offset   | name=mesh_transmission_2 offset=0x14 range=32   |
+| triangle_number       | s_axi_threed_render_hls_io | register  |          | name=triangle_number offset=0x10 range=32       |
+| screen_transmission   | m_axi_gmem                 | interface |          |                                                 |
+| screen_transmission   | s_axi_control              | register  | offset   | name=screen_transmission_1 offset=0x1c range=32 |
+| screen_transmission   | s_axi_control              | register  | offset   | name=screen_transmission_2 offset=0x20 range=32 |
+| screen_height         | s_axi_threed_render_hls_io | register  |          | name=screen_height offset=0x18 range=32         |
+| screen_width          | s_axi_threed_render_hls_io | register  |          | name=screen_width offset=0x20 range=32          |
+| rotation_x_theta      | s_axi_threed_render_hls_io | register  |          | name=rotation_x_theta offset=0x28 range=32      |
+| rotation_y_theta      | s_axi_threed_render_hls_io | register  |          | name=rotation_y_theta offset=0x30 range=32      |
+| rotation_z_theta      | s_axi_threed_render_hls_io | register  |          | name=rotation_z_theta offset=0x38 range=32      |
+| distance_transmission | s_axi_threed_render_hls_io | register  |          | name=distance_transmission offset=0x40 range=32 |
++-----------------------+----------------------------+-----------+----------+-------------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-------------------------------------+-----------+----------+-------+---------------------------------+
+| HW Interface | Loop                                | Direction | Length   | Width | Location                        |
++--------------+-------------------------------------+-----------+----------+-------+---------------------------------+
+| m_axi_gmem   | threed_render_mesh_i                | read      | variable | 32    | src/threed_render_hls.cpp:53:5  |
+| m_axi_gmem   | threed_render_screen_transmission_k | write     | variable | 32    | src/threed_render_hls.cpp:220:9 |
++--------------+-------------------------------------+-----------+----------+-------+---------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+---------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------+------------+---------------------------------+
+| HW Interface | Variable            | Loop                                | Problem                                                                                                 | Resolution | Location                        |
++--------------+---------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------+------------+---------------------------------+
+| m_axi_gmem   | screen_transmission | threed_render_screen_transmission_k | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | src/threed_render_hls.cpp:220:9 |
+| m_axi_gmem   | mesh_transmission   | threed_render_mesh_k                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | src/threed_render_hls.cpp:59:13 |
++--------------+---------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------+------------+---------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+-------------------------------+-------+--------+---------+
+| Name                                       | DSP | Pragma | Variable                      | Op    | Impl   | Latency |
++--------------------------------------------+-----+--------+-------------------------------+-------+--------+---------+
+| + threed_render_hls                        | 136 |        |                               |       |        |         |
+|   man_V_1_fu_1375_p2                       | -   |        | man_V_1                       | sub   | fabric | 0       |
+|   F2_fu_1388_p2                            | -   |        | F2                            | sub   | fabric | 0       |
+|   add_ln570_fu_1400_p2                     | -   |        | add_ln570                     | add   | fabric | 0       |
+|   sub_ln570_fu_1406_p2                     | -   |        | sub_ln570                     | sub   | fabric | 0       |
+|   add_ln53_1_fu_1307_p2                    | -   |        | add_ln53_1                    | add   | fabric | 0       |
+|   sub_ln60_fu_1569_p2                      | -   |        | sub_ln60                      | sub   | fabric | 0       |
+|   add_ln53_fu_1584_p2                      | -   |        | add_ln53                      | add   | fabric | 0       |
+|   add_ln60_fu_1594_p2                      | -   |        | add_ln60                      | add   | fabric | 0       |
+|   sub_ln60_1_fu_1615_p2                    | -   |        | sub_ln60_1                    | sub   | fabric | 0       |
+|   add_ln57_fu_1627_p2                      | -   |        | add_ln57                      | add   | fabric | 0       |
+|   add_ln60_1_fu_1641_p2                    | -   |        | add_ln60_1                    | add   | fabric | 0       |
+|   add_ln59_fu_1657_p2                      | -   |        | add_ln59                      | add   | fabric | 0       |
+|   man_V_34_fu_1717_p2                      | -   |        | man_V_34                      | sub   | fabric | 0       |
+|   F2_11_fu_1730_p2                         | -   |        | F2_11                         | sub   | fabric | 0       |
+|   add_ln570_3_fu_1742_p2                   | -   |        | add_ln570_3                   | add   | fabric | 0       |
+|   sub_ln570_3_fu_1748_p2                   | -   |        | sub_ln570_3                   | sub   | fabric | 0       |
+|   man_V_4_fu_2230_p2                       | -   |        | man_V_4                       | sub   | fabric | 0       |
+|   F2_1_fu_2243_p2                          | -   |        | F2_1                          | sub   | fabric | 0       |
+|   add_ln570_1_fu_2255_p2                   | -   |        | add_ln570_1                   | add   | fabric | 0       |
+|   sub_ln570_1_fu_2261_p2                   | -   |        | sub_ln570_1                   | sub   | fabric | 0       |
+|   man_V_7_fu_2299_p2                       | -   |        | man_V_7                       | sub   | fabric | 0       |
+|   F2_2_fu_2312_p2                          | -   |        | F2_2                          | sub   | fabric | 0       |
+|   add_ln570_2_fu_2324_p2                   | -   |        | add_ln570_2                   | add   | fabric | 0       |
+|   sub_ln570_2_fu_2330_p2                   | -   |        | sub_ln570_2                   | sub   | fabric | 0       |
+|   man_V_10_fu_2385_p2                      | -   |        | man_V_10                      | sub   | fabric | 0       |
+|   F2_3_fu_2398_p2                          | -   |        | F2_3                          | sub   | fabric | 0       |
+|   add_ln570_4_fu_2410_p2                   | -   |        | add_ln570_4                   | add   | fabric | 0       |
+|   sub_ln570_4_fu_2416_p2                   | -   |        | sub_ln570_4                   | sub   | fabric | 0       |
+|   man_V_13_fu_2454_p2                      | -   |        | man_V_13                      | sub   | fabric | 0       |
+|   F2_4_fu_2467_p2                          | -   |        | F2_4                          | sub   | fabric | 0       |
+|   add_ln570_5_fu_2479_p2                   | -   |        | add_ln570_5                   | add   | fabric | 0       |
+|   sub_ln570_5_fu_2485_p2                   | -   |        | sub_ln570_5                   | sub   | fabric | 0       |
+|   man_V_16_fu_2523_p2                      | -   |        | man_V_16                      | sub   | fabric | 0       |
+|   F2_5_fu_2536_p2                          | -   |        | F2_5                          | sub   | fabric | 0       |
+|   add_ln570_6_fu_2548_p2                   | -   |        | add_ln570_6                   | add   | fabric | 0       |
+|   sub_ln570_6_fu_2554_p2                   | -   |        | sub_ln570_6                   | sub   | fabric | 0       |
+|   man_V_19_fu_2609_p2                      | -   |        | man_V_19                      | sub   | fabric | 0       |
+|   F2_6_fu_2622_p2                          | -   |        | F2_6                          | sub   | fabric | 0       |
+|   add_ln570_7_fu_2634_p2                   | -   |        | add_ln570_7                   | add   | fabric | 0       |
+|   sub_ln570_7_fu_2640_p2                   | -   |        | sub_ln570_7                   | sub   | fabric | 0       |
+|   man_V_22_fu_2695_p2                      | -   |        | man_V_22                      | sub   | fabric | 0       |
+|   F2_7_fu_2708_p2                          | -   |        | F2_7                          | sub   | fabric | 0       |
+|   add_ln570_8_fu_2720_p2                   | -   |        | add_ln570_8                   | add   | fabric | 0       |
+|   sub_ln570_8_fu_2726_p2                   | -   |        | sub_ln570_8                   | sub   | fabric | 0       |
+|   man_V_25_fu_2781_p2                      | -   |        | man_V_25                      | sub   | fabric | 0       |
+|   F2_8_fu_2794_p2                          | -   |        | F2_8                          | sub   | fabric | 0       |
+|   add_ln570_9_fu_2806_p2                   | -   |        | add_ln570_9                   | add   | fabric | 0       |
+|   sub_ln570_9_fu_2812_p2                   | -   |        | sub_ln570_9                   | sub   | fabric | 0       |
+|   man_V_28_fu_2867_p2                      | -   |        | man_V_28                      | sub   | fabric | 0       |
+|   F2_9_fu_2880_p2                          | -   |        | F2_9                          | sub   | fabric | 0       |
+|   add_ln570_10_fu_2892_p2                  | -   |        | add_ln570_10                  | add   | fabric | 0       |
+|   sub_ln570_10_fu_2898_p2                  | -   |        | sub_ln570_10                  | sub   | fabric | 0       |
+|   mul_40s_34ns_73_2_1_U138                 | 4   |        | r_V_2                         | mul   | auto   | 1       |
+|   add_ln117_fu_3911_p2                     | -   |        | add_ln117                     | add   | fabric | 0       |
+|   mesh_after_rotation_z_V_2_0_4_fu_4174_p2 | -   |        | mesh_after_rotation_z_V_2_0_4 | add   | fabric | 0       |
+|   mesh_after_rotation_z_V_2_1_4_fu_4179_p2 | -   |        | mesh_after_rotation_z_V_2_1_4 | add   | fabric | 0       |
+|   mesh_after_rotation_z_V_2_2_4_fu_4184_p2 | -   |        | mesh_after_rotation_z_V_2_2_4 | add   | fabric | 0       |
+|   vector0to1_V_fu_4189_p2                  | -   |        | vector0to1_V                  | sub   | fabric | 0       |
+|   vector0to1_V_3_fu_4195_p2                | -   |        | vector0to1_V_3                | sub   | fabric | 0       |
+|   vector0to1_V_4_fu_4201_p2                | -   |        | vector0to1_V_4                | sub   | fabric | 0       |
+|   vector0to2_V_fu_4207_p2                  | -   |        | vector0to2_V                  | sub   | fabric | 0       |
+|   vector0to2_V_1_fu_4213_p2                | -   |        | vector0to2_V_1                | sub   | fabric | 0       |
+|   vector0to2_V_2_fu_4219_p2                | -   |        | vector0to2_V_2                | sub   | fabric | 0       |
+|   mul_40s_40s_73_2_1_U139                  | 4   |        | r_V_5                         | mul   | auto   | 1       |
+|   mul_40s_40s_73_2_1_U140                  | 4   |        | r_V_7                         | mul   | auto   | 1       |
+|   ret_V_fu_4336_p2                         | -   |        | ret_V                         | sub   | fabric | 0       |
+|   mul_40s_40s_73_2_1_U141                  | 4   |        | r_V_8                         | mul   | auto   | 1       |
+|   mul_40s_40s_73_2_1_U142                  | 4   |        | r_V_10                        | mul   | auto   | 1       |
+|   ret_V_1_fu_4350_p2                       | -   |        | ret_V_1                       | sub   | fabric | 0       |
+|   mul_40s_40s_73_2_1_U143                  | 4   |        | r_V_11                        | mul   | auto   | 1       |
+|   mul_40s_40s_73_2_1_U144                  | 4   |        | r_V_12                        | mul   | auto   | 1       |
+|   ret_V_2_fu_4364_p2                       | -   |        | ret_V_2                       | sub   | fabric | 0       |
+|   mul_40s_40s_80_2_1_U146                  | 4   |        | r_V                           | mul   | auto   | 1       |
+|   mul_40s_40s_80_2_1_U147                  | 4   |        | r_V_30                        | mul   | auto   | 1       |
+|   mul_40s_40s_80_2_1_U148                  | 4   |        | r_V_31                        | mul   | auto   | 1       |
+|   NZeros_1_fu_4489_p2                      | -   |        | NZeros_1                      | add   | fabric | 0       |
+|   sub_ln1099_fu_4503_p2                    | -   |        | sub_ln1099                    | sub   | fabric | 0       |
+|   lsb_index_fu_4552_p2                     | -   |        | lsb_index                     | add   | fabric | 0       |
+|   sub_ln1102_fu_4573_p2                    | -   |        | sub_ln1102                    | sub   | fabric | 0       |
+|   add_ln1109_fu_4660_p2                    | -   |        | add_ln1109                    | add   | fabric | 0       |
+|   sub_ln1110_fu_4674_p2                    | -   |        | sub_ln1110                    | sub   | fabric | 0       |
+|   m_1_fu_4706_p2                           | -   |        | m_1                           | add   | fabric | 0       |
+|   fsqrt_32ns_32ns_32_16_no_dsp_1_U136      | -   |        | d_assign_s                    | fsqrt | fabric | 15      |
+|   man_V_31_fu_4836_p2                      | -   |        | man_V_31                      | sub   | fabric | 0       |
+|   F2_10_fu_4849_p2                         | -   |        | F2_10                         | sub   | fabric | 0       |
+|   add_ln570_11_fu_4861_p2                  | -   |        | add_ln570_11                  | add   | fabric | 0       |
+|   sub_ln570_11_fu_4867_p2                  | -   |        | sub_ln570_11                  | sub   | fabric | 0       |
+|   ret_V_5_fu_5027_p2                       | -   |        | ret_V_5                       | sub   | fabric | 0       |
+|   ret_V_25_fu_4300_p2                      | -   |        | ret_V_25                      | add   | fabric | 0       |
+|   ret_V_26_fu_4313_p2                      | -   |        | ret_V_26                      | add   | fabric | 0       |
+|   mul_42s_44ns_85_5_1_U145                 | 4   |        | mul_ln1303                    | mul   | auto   | 4       |
+|   sub_ln1303_fu_4517_p2                    | -   |        | sub_ln1303                    | sub   | fabric | 0       |
+|   sub_ln1303_1_fu_4538_p2                  | -   |        | sub_ln1303_1                  | sub   | fabric | 0       |
+|   add_ln181_1_fu_5054_p2                   | -   |        | add_ln181_1                   | add   | fabric | 0       |
+|   add_ln181_fu_5065_p2                     | -   |        | add_ln181                     | add   | fabric | 0       |
+|   add_ln189_fu_5086_p2                     | -   |        | add_ln189                     | add   | fabric | 0       |
+|   add_ln185_fu_5102_p2                     | -   |        | add_ln185                     | add   | fabric | 0       |
+|   empty_72_fu_5139_p2                      | -   |        | empty_72                      | add   | fabric | 0       |
+|   empty_73_fu_5150_p2                      | -   |        | empty_73                      | add   | fabric | 0       |
+|   empty_74_fu_5161_p2                      | -   |        | empty_74                      | add   | fabric | 0       |
+|   empty_75_fu_5172_p2                      | -   |        | empty_75                      | add   | fabric | 0       |
+|   empty_76_fu_5183_p2                      | -   |        | empty_76                      | add   | fabric | 0       |
+|   empty_77_fu_5194_p2                      | -   |        | empty_77                      | add   | fabric | 0       |
+|   add_ln193_fu_5210_p2                     | -   |        | add_ln193                     | add   | fabric | 0       |
+|   ret_V_6_fu_5259_p2                       | -   |        | ret_V_6                       | sub   | fabric | 0       |
+|   ret_V_8_fu_5272_p2                       | -   |        | ret_V_8                       | sub   | fabric | 0       |
+|   ret_V_11_fu_5286_p2                      | -   |        | ret_V_11                      | sub   | fabric | 0       |
+|   ret_V_13_fu_5300_p2                      | -   |        | ret_V_13                      | sub   | fabric | 0       |
+|   ret_V_16_fu_5310_p2                      | -   |        | ret_V_16                      | sub   | fabric | 0       |
+|   ret_V_18_fu_5320_p2                      | -   |        | ret_V_18                      | sub   | fabric | 0       |
+|   add_ln197_1_fu_5354_p2                   | -   |        | add_ln197_1                   | add   | fabric | 0       |
+|   add_ln197_2_fu_5360_p2                   | -   |        | add_ln197_2                   | add   | fabric | 0       |
+|   add_ln197_fu_5340_p2                     | -   |        | add_ln197                     | add   | fabric | 0       |
+|   pixel_center_y_V_fu_5391_p2              | -   |        | pixel_center_y_V              | add   | fabric | 0       |
+|   ret_V_28_fu_5404_p2                      | -   |        | ret_V_28                      | sub   | fabric | 0       |
+|   mul_41s_41s_73_2_1_U152                  | 4   |        | r_V_20                        | mul   | auto   | 1       |
+|   ret_V_30_fu_5409_p2                      | -   |        | ret_V_30                      | sub   | fabric | 0       |
+|   mul_41s_41s_73_2_1_U153                  | 4   |        | r_V_24                        | mul   | auto   | 1       |
+|   ret_V_32_fu_5414_p2                      | -   |        | ret_V_32                      | sub   | fabric | 0       |
+|   mul_41s_41s_73_2_1_U154                  | 4   |        | r_V_28                        | mul   | auto   | 1       |
+|   add_ln1649_fu_5465_p2                    | -   |        | add_ln1649                    | add   | fabric | 0       |
+|   add_ln200_fu_5481_p2                     | -   |        | add_ln200                     | add   | fabric | 0       |
+|   add_ln813_4_fu_5487_p2                   | -   |        | add_ln813_4                   | add   | fabric | 0       |
+|   ret_V_27_fu_5506_p2                      | -   |        | ret_V_27                      | sub   | fabric | 0       |
+|   mul_41s_41s_73_2_1_U155                  | 4   |        | r_V_19                        | mul   | auto   | 1       |
+|   ret_V_14_fu_5545_p2                      | -   |        | ret_V_14                      | sub   | fabric | 0       |
+|   ret_V_29_fu_5511_p2                      | -   |        | ret_V_29                      | sub   | fabric | 0       |
+|   mul_41s_41s_73_2_1_U156                  | 4   |        | r_V_23                        | mul   | auto   | 1       |
+|   ret_V_19_fu_5549_p2                      | -   |        | ret_V_19                      | sub   | fabric | 0       |
+|   ret_V_31_fu_5516_p2                      | -   |        | ret_V_31                      | sub   | fabric | 0       |
+|   mul_41s_41s_73_2_1_U157                  | 4   |        | r_V_27                        | mul   | auto   | 1       |
+|   ret_V_22_fu_5553_p2                      | -   |        | ret_V_22                      | sub   | fabric | 0       |
+|   mul_8ns_8ns_16_1_1_U158                  | -   |        | mul_ln216                     | mul   | auto   | 0       |
+|   add_ln216_1_fu_5622_p2                   | -   |        | add_ln216_1                   | add   | fabric | 0       |
+|   add_ln216_fu_5633_p2                     | -   |        | add_ln216                     | add   | fabric | 0       |
+|   add_ln1090_fu_5643_p2                    | -   |        | add_ln1090                    | add   | fabric | 0       |
+|   add_ln220_fu_5658_p2                     | -   |        | add_ln220                     | add   | fabric | 0       |
+|   tmp_V_fu_5685_p2                         | -   |        | tmp_V                         | sub   | fabric | 0       |
+|   sub_ln1099_1_fu_5730_p2                  | -   |        | sub_ln1099_1                  | sub   | fabric | 0       |
+|   lsb_index_1_fu_5744_p2                   | -   |        | lsb_index_1                   | add   | fabric | 0       |
+|   sub_ln1102_1_fu_5765_p2                  | -   |        | sub_ln1102_1                  | sub   | fabric | 0       |
+|   add_ln1109_1_fu_5844_p2                  | -   |        | add_ln1109_1                  | add   | fabric | 0       |
+|   sub_ln1110_1_fu_5858_p2                  | -   |        | sub_ln1110_1                  | sub   | fabric | 0       |
+|   m_5_fu_5886_p2                           | -   |        | m_5                           | add   | fabric | 0       |
+|  + rotation_matrix_initial                 | 12  |        |                               |       |        |         |
+|    fdiv_32ns_32ns_32_16_no_dsp_1_U35       | -   |        | div                           | fdiv  | fabric | 15      |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U34       | 3   |        | x_assign                      | fmul  | maxdsp | 3       |
+|   + sin_or_cos_float_s                     | 9   |        |                               |       |        |         |
+|     Ex_V_fu_499_p2                         | -   |        | Ex_V                          | add   | fabric | 0       |
+|     add_ln214_fu_323_p2                    | -   |        | add_ln214                     | add   | fabric | 0       |
+|     mul_80s_24ns_80_5_1_U12                | 3   |        | ret_V                         | mul   | auto   | 4       |
+|     Mx_bits_V_1_fu_435_p2                  | -   |        | Mx_bits_V_1                   | sub   | fabric | 0       |
+|     Ex_V_3_fu_538_p2                       | -   |        | Ex_V_3                        | sub   | fabric | 0       |
+|     sub_ln1512_fu_556_p2                   | -   |        | sub_ln1512                    | sub   | fabric | 0       |
+|     mul_mul_15ns_15ns_30_4_1_U18           | 1   |        | r_V                           | mul   | dsp48  | 3       |
+|     mul_23s_22ns_45_1_1_U16                | 1   |        | r_V_33                        | mul   | auto   | 0       |
+|     mul_mul_15ns_15s_30_4_1_U19            | 1   |        | r_V_35                        | mul   | dsp48  | 3       |
+|     mul_30s_29ns_58_2_1_U17                | 3   |        | r_V_37                        | mul   | auto   | 1       |
+|     add_ln329_fu_998_p2                    | -   |        | add_ln329                     | add   | fabric | 0       |
+|     newexp_fu_1008_p2                      | -   |        | newexp                        | sub   | fabric | 0       |
+|    + sin_or_cos_float_Pipeline_1           | 0   |        |                               |       |        |         |
+|      add_ln311_fu_92_p2                    | -   |        | add_ln311                     | add   | fabric | 0       |
+|    + sin_or_cos_float_Pipeline_2           | 0   |        |                               |       |        |         |
+|      add_ln318_fu_147_p2                   | -   |        | add_ln318                     | add   | fabric | 0       |
+|      shift_1_out                           | -   |        | shift_1                       | add   | fabric | 0       |
+|      sub_ln1512_fu_173_p2                  | -   |        | sub_ln1512                    | sub   | fabric | 0       |
+|  + matrix_mutiply                          | 16  |        |                               |       |        |         |
+|    sub_ln1271_fu_338_p2                    | -   |        | sub_ln1271                    | sub   | fabric | 0       |
+|    add_ln1271_fu_348_p2                    | -   |        | add_ln1271                    | add   | fabric | 0       |
+|    sub_ln1271_1_fu_370_p2                  | -   |        | sub_ln1271_1                  | sub   | fabric | 0       |
+|    add_ln1271_1_fu_376_p2                  | -   |        | add_ln1271_1                  | add   | fabric | 0       |
+|    add_ln1271_2_fu_386_p2                  | -   |        | add_ln1271_2                  | add   | fabric | 0       |
+|    mul_40s_40s_73_2_1_U41                  | 4   |        | r_V_55                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U42                  | 4   |        | r_V_56                        | mul   | auto   | 1       |
+|    ret_V_fu_446_p2                         | -   |        | ret_V                         | add   | fabric | 0       |
+|    mul_40s_40s_73_2_1_U43                  | 4   |        | r_V_57                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U44                  | 4   |        | r_V_58                        | mul   | auto   | 1       |
+|    ret_V_38_fu_460_p2                      | -   |        | ret_V_38                      | add   | fabric | 0       |
+|  + matrix_mutiply_1                        | 28  |        |                               |       |        |         |
+|    mul_40s_40s_73_2_1_U66                  | 4   |        | r_V_45                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U67                  | 4   |        | r_V_47                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U68                  | 4   |        | r_V_49                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U69                  | 4   |        | r_V_50                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U70                  | 4   |        | r_V_51                        | mul   | auto   | 1       |
+|    ret_V_36_fu_495_p2                      | -   |        | ret_V_36                      | add   | fabric | 0       |
+|    mul_40s_40s_73_2_1_U71                  | 4   |        | r_V_52                        | mul   | auto   | 1       |
+|    mul_40s_40s_73_2_1_U72                  | 4   |        | r_V_53                        | mul   | auto   | 1       |
+|    ret_V_37_fu_509_p2                      | -   |        | ret_V_37                      | add   | fabric | 0       |
+|  + matrix_mutiply_2                        | 12  |        |                               |       |        |         |
+|    sub_ln16_fu_333_p2                      | -   |        | sub_ln16                      | sub   | fabric | 0       |
+|    add_ln16_fu_343_p2                      | -   |        | add_ln16                      | add   | fabric | 0       |
+|    sub_ln16_1_fu_365_p2                    | -   |        | sub_ln16_1                    | sub   | fabric | 0       |
+|    add_ln13_fu_375_p2                      | -   |        | add_ln13                      | add   | fabric | 0       |
+|    add_ln14_fu_393_p2                      | -   |        | add_ln14                      | add   | fabric | 0       |
+|    mul_40s_40s_73_2_1_U104                 | 4   |        | r_V_39                        | mul   | auto   | 1       |
+|    mul_40s_34ns_73_2_1_U105                | 4   |        | r_V_42                        | mul   | auto   | 1       |
+|    mul_40s_35ns_73_2_1_U106                | 4   |        | r_V_43                        | mul   | auto   | 1       |
+|    ret_V_fu_276_p2                         | -   |        | ret_V                         | add   | fabric | 0       |
++--------------------------------------------+-----+--------+-------------------------------+-------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------------------+------+------+--------+---------------------------------+---------+--------+---------+
+| Name                                  | BRAM | URAM | Pragma | Variable                        | Storage | Impl   | Latency |
++---------------------------------------+------+------+--------+---------------------------------+---------+--------+---------+
+| + threed_render_hls                   | 90   | 0    |        |                                 |         |        |         |
+|   mesh_V_U                            | 3    | -    |        | mesh_V                          | ram_s2p | auto   | 1       |
+|   color_V_U                           | 2    | -    |        | color_V                         | ram_1p  | auto   | 1       |
+|   deep_V_U                            | 2    | -    |        | deep_V                          | ram_1p  | auto   | 1       |
+|   mesh_after_projection_V_U           | 3    | -    |        | mesh_after_projection_V         | ram_t2p | auto   | 1       |
+|   screen_V_U                          | 40   | -    |        | screen_V                        | ram_1p  | auto   | 1       |
+|   deep_min_V_U                        | 40   | -    |        | deep_min_V                      | ram_1p  | auto   | 1       |
+|  + rotation_matrix_initial            | 0    | 0    |        |                                 |         |        |         |
+|   + sin_or_cos_float_s                | 0    | 0    |        |                                 |         |        |         |
+|     ref_4oPi_table_100_V_U            | -    | -    | pragma | ref_4oPi_table_100_V            | rom_1p  | lutram | 1       |
+|     second_order_float_sin_cos_K0_V_U | -    | -    | pragma | second_order_float_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|     second_order_float_sin_cos_K1_V_U | -    | -    | pragma | second_order_float_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|     second_order_float_sin_cos_K2_V_U | -    | -    | pragma | second_order_float_sin_cos_K2_V | rom_1p  | lutram | 1       |
++---------------------------------------+------+------+--------+---------------------------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------------+-----------------------------------------------------------------------------+---------------------------------------------------------+
+| Type           | Options                                                                     | Location                                                |
++----------------+-----------------------------------------------------------------------------+---------------------------------------------------------+
+| inline         | off                                                                         | src/threed_render_hls.cpp:9 in matrix_mutiply           |
+| inline         | off                                                                         | src/threed_render_hls.cpp:23 in rotation_matrix_initial |
+| allocation     | operation instances = fmul limit = 1                                        | src/threed_render_hls.cpp:24 in rotation_matrix_initial |
+| allocation     | operation instances = fdiv limit = 1                                        | src/threed_render_hls.cpp:25 in rotation_matrix_initial |
+| allocation     | function instances = rotation_matrix_initial limit = 1                      | src/threed_render_hls.cpp:38 in threed_render_hls       |
+| interface      | mode = m_axi depth = 110 * 3 * 3 port = mesh_transmission offset = slave    | src/threed_render_hls.cpp:39 in threed_render_hls       |
+| interface      | mode = m_axi depth = 100 *100 port = screen_transmission offset = slave     | src/threed_render_hls.cpp:40 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = return                | src/threed_render_hls.cpp:41 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = triangle_number       | src/threed_render_hls.cpp:42 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = screen_height         | src/threed_render_hls.cpp:43 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = screen_width          | src/threed_render_hls.cpp:44 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = rotation_x_theta      | src/threed_render_hls.cpp:45 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = rotation_y_theta      | src/threed_render_hls.cpp:46 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = rotation_z_theta      | src/threed_render_hls.cpp:47 in threed_render_hls       |
+| interface      | mode = s_axilite bundle = threed_render_hls_io port = distance_transmission | src/threed_render_hls.cpp:48 in threed_render_hls       |
+| loop_tripcount | max = 110 min = 0                                                           | src/threed_render_hls.cpp:54 in threed_render_hls       |
+| pipeline       | off                                                                         | src/threed_render_hls.cpp:55 in threed_render_hls       |
+| loop_tripcount | max = 110 min = 0                                                           | src/threed_render_hls.cpp:119 in threed_render_hls      |
+| pipeline       | off                                                                         | src/threed_render_hls.cpp:120 in threed_render_hls      |
+| loop_tripcount | max = 100 min = 0                                                           | src/threed_render_hls.cpp:182 in threed_render_hls      |
+| pipeline       | off                                                                         | src/threed_render_hls.cpp:183 in threed_render_hls      |
+| loop_tripcount | max = 100 min = 0                                                           | src/threed_render_hls.cpp:187 in threed_render_hls      |
+| loop_tripcount | max = 110 min = 0                                                           | src/threed_render_hls.cpp:194 in threed_render_hls      |
+| pipeline       | off                                                                         | src/threed_render_hls.cpp:195 in threed_render_hls      |
+| loop_tripcount | max = 100 min = 0                                                           | src/threed_render_hls.cpp:198 in threed_render_hls      |
+| loop_tripcount | max = 100 min = 0                                                           | src/threed_render_hls.cpp:202 in threed_render_hls      |
+| loop_tripcount | max = 100 min = 0                                                           | src/threed_render_hls.cpp:217 in threed_render_hls      |
+| pipeline       | off                                                                         | src/threed_render_hls.cpp:218 in threed_render_hls      |
+| loop_tripcount | max = 100 min = 0                                                           | src/threed_render_hls.cpp:221 in threed_render_hls      |
++----------------+-----------------------------------------------------------------------------+---------------------------------------------------------+
+
+

@@ -1,0 +1,890 @@
+
+
+================================================================
+== Vitis HLS Report for 'rotation_matrix_initial'
+================================================================
+* Date:           Tue Jul 18 18:12:00 2023
+
+* Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+* Project:        threed_render_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.120 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       52|       53|  0.520 us|  0.530 us|   52|   53|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                              |                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |           Instance           |       Module       |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +------------------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_sin_or_cos_float_s_fu_88  |sin_or_cos_float_s  |       30|       31|  0.300 us|  0.310 us|   30|   31|       no|
+        +------------------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 24 
+21 --> 22 
+22 --> 23 
+23 --> 
+24 --> 25 
+25 --> 23 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.07>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%rotation_theta_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %rotation_theta" [src/threed_render_hls.cpp:21]   --->   Operation 26 'read' 'rotation_theta_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [16/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 27 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.07>
+ST_2 : Operation 28 [15/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 28 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.07>
+ST_3 : Operation 29 [14/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 29 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.07>
+ST_4 : Operation 30 [13/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 30 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.07>
+ST_5 : Operation 31 [12/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 31 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.07>
+ST_6 : Operation 32 [11/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 32 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.07>
+ST_7 : Operation 33 [10/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 33 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.07>
+ST_8 : Operation 34 [9/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 34 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.07>
+ST_9 : Operation 35 [8/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 35 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.07>
+ST_10 : Operation 36 [7/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 36 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.07>
+ST_11 : Operation 37 [6/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 37 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.07>
+ST_12 : Operation 38 [5/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 38 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.07>
+ST_13 : Operation 39 [4/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 39 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.07>
+ST_14 : Operation 40 [3/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 40 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.07>
+ST_15 : Operation 41 [2/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 41 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.07>
+ST_16 : Operation 42 [1/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 42 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 5.70>
+ST_17 : Operation 43 [4/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 43 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 5.70>
+ST_18 : Operation 44 [3/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 44 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 5.70>
+ST_19 : Operation 45 [2/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 45 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 5.70>
+ST_20 : Operation 46 [1/1] (0.00ns)   --->   "%sin_or_cos_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %sin_or_cos" [src/threed_render_hls.cpp:21]   --->   Operation 46 'read' 'sin_or_cos_read' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 47 [1/1] (0.00ns)   --->   "%add_or_sub_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %add_or_sub" [src/threed_render_hls.cpp:21]   --->   Operation 47 'read' 'add_or_sub_read' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 48 [1/1] (0.00ns)   --->   "%specresourcelimit_ln24 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_24, void @empty_8, void @empty_8, void @empty_8" [src/threed_render_hls.cpp:24]   --->   Operation 48 'specresourcelimit' 'specresourcelimit_ln24' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 49 [1/1] (0.00ns)   --->   "%specresourcelimit_ln25 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_10, void @empty_8, void @empty_8, void @empty_8" [src/threed_render_hls.cpp:25]   --->   Operation 49 'specresourcelimit' 'specresourcelimit_ln25' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 50 [1/1] (0.97ns)   --->   "%xor_ln27 = xor i1 %add_or_sub_read, i1 1" [src/threed_render_hls.cpp:27]   --->   Operation 50 'xor' 'xor_ln27' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 51 [1/1] (0.97ns)   --->   "%or_ln27 = or i1 %sin_or_cos_read, i1 %xor_ln27" [src/threed_render_hls.cpp:27]   --->   Operation 51 'or' 'or_ln27' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 52 [1/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 52 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln27 = br i1 %or_ln27, void %if.then, void %if.else" [src/threed_render_hls.cpp:27]   --->   Operation 53 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node or_ln29)   --->   "%xor_ln29 = xor i1 %sin_or_cos_read, i1 1" [src/threed_render_hls.cpp:29]   --->   Operation 54 'xor' 'xor_ln29' <Predicate = (or_ln27)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 55 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln29 = or i1 %xor_ln27, i1 %xor_ln29" [src/threed_render_hls.cpp:29]   --->   Operation 55 'or' 'or_ln29' <Predicate = (or_ln27)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 5.46>
+ST_21 : Operation 56 [2/2] (5.46ns)   --->   "%tmp = call i32 @sin_or_cos<float>, i32 %x_assign, i1 1, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127]   --->   Operation 56 'call' 'tmp' <Predicate = true> <Delay = 5.46> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 7.12>
+ST_22 : Operation 57 [1/2] (7.12ns)   --->   "%tmp = call i32 @sin_or_cos<float>, i32 %x_assign, i1 1, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127]   --->   Operation 57 'call' 'tmp' <Predicate = true> <Delay = 7.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 2.70>
+ST_23 : Operation 58 [1/1] (1.70ns)   --->   "%br_ln28 = br void %cleanup" [src/threed_render_hls.cpp:28]   --->   Operation 58 'br' 'br_ln28' <Predicate = (!or_ln27)> <Delay = 1.70>
+ST_23 : Operation 59 [1/1] (1.70ns)   --->   "%br_ln29 = br i1 %or_ln29, void %cleanup, void %if.else6" [src/threed_render_hls.cpp:29]   --->   Operation 59 'br' 'br_ln29' <Predicate = (or_ln27)> <Delay = 1.70>
+ST_23 : Operation 60 [1/1] (0.00ns)   --->   "%bitcast_ln32 = bitcast i32 %tmp_s" [src/threed_render_hls.cpp:32]   --->   Operation 60 'bitcast' 'bitcast_ln32' <Predicate = (or_ln27 & or_ln29)> <Delay = 0.00>
+ST_23 : Operation 61 [1/1] (0.99ns)   --->   "%xor_ln32 = xor i32 %bitcast_ln32, i32 2147483648" [src/threed_render_hls.cpp:32]   --->   Operation 61 'xor' 'xor_ln32' <Predicate = (or_ln27 & or_ln29)> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 62 [1/1] (0.00ns)   --->   "%bitcast_ln32_1 = bitcast i32 %xor_ln32" [src/threed_render_hls.cpp:32]   --->   Operation 62 'bitcast' 'bitcast_ln32_1' <Predicate = (or_ln27 & or_ln29)> <Delay = 0.00>
+ST_23 : Operation 63 [1/1] (1.70ns)   --->   "%br_ln32 = br void %cleanup" [src/threed_render_hls.cpp:32]   --->   Operation 63 'br' 'br_ln32' <Predicate = (or_ln27 & or_ln29)> <Delay = 1.70>
+ST_23 : Operation 64 [1/1] (0.00ns)   --->   "%retval_0 = phi i32 %bitcast_ln32_1, void %if.else6, i32 %tmp, void %if.then, i32 %tmp_s, void %if.else" [src/threed_render_hls.cpp:32]   --->   Operation 64 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln33 = ret i32 %retval_0" [src/threed_render_hls.cpp:33]   --->   Operation 65 'ret' 'ret_ln33' <Predicate = true> <Delay = 0.00>
+
+State 24 <SV = 20> <Delay = 5.46>
+ST_24 : Operation 66 [2/2] (5.46ns)   --->   "%tmp_s = call i32 @sin_or_cos<float>, i32 %x_assign, i1 0, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123]   --->   Operation 66 'call' 'tmp_s' <Predicate = true> <Delay = 5.46> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 21> <Delay = 7.12>
+ST_25 : Operation 67 [1/2] (7.12ns)   --->   "%tmp_s = call i32 @sin_or_cos<float>, i32 %x_assign, i1 0, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123]   --->   Operation 67 'call' 'tmp_s' <Predicate = true> <Delay = 7.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ rotation_theta]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ add_or_sub]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ sin_or_cos]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ ref_4oPi_table_100_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ second_order_float_sin_cos_K0_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ second_order_float_sin_cos_K1_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ second_order_float_sin_cos_K2_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+rotation_theta_read    (read             ) [ 00111111111111111000000000]
+div                    (fdiv             ) [ 00000000000000000111100000]
+sin_or_cos_read        (read             ) [ 00000000000000000000000000]
+add_or_sub_read        (read             ) [ 00000000000000000000000000]
+specresourcelimit_ln24 (specresourcelimit) [ 00000000000000000000000000]
+specresourcelimit_ln25 (specresourcelimit) [ 00000000000000000000000000]
+xor_ln27               (xor              ) [ 00000000000000000000000000]
+or_ln27                (or               ) [ 00000000000000000000111111]
+x_assign               (fmul             ) [ 00000000000000000000011011]
+br_ln27                (br               ) [ 00000000000000000000000000]
+xor_ln29               (xor              ) [ 00000000000000000000000000]
+or_ln29                (or               ) [ 00000000000000000000011111]
+tmp                    (call             ) [ 00000000000000000000000100]
+br_ln28                (br               ) [ 00000000000000000000000000]
+br_ln29                (br               ) [ 00000000000000000000000000]
+bitcast_ln32           (bitcast          ) [ 00000000000000000000000000]
+xor_ln32               (xor              ) [ 00000000000000000000000000]
+bitcast_ln32_1         (bitcast          ) [ 00000000000000000000000000]
+br_ln32                (br               ) [ 00000000000000000000000000]
+retval_0               (phi              ) [ 00000000000000000000000100]
+ret_ln33               (ret              ) [ 00000000000000000000000000]
+tmp_s                  (call             ) [ 00000000000000000000000100]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="rotation_theta">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rotation_theta"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="add_or_sub">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="add_or_sub"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="sin_or_cos">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sin_or_cos"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="ref_4oPi_table_100_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ref_4oPi_table_100_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="second_order_float_sin_cos_K0_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="second_order_float_sin_cos_K0_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="second_order_float_sin_cos_K1_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="second_order_float_sin_cos_K1_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="second_order_float_sin_cos_K2_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="second_order_float_sin_cos_K2_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecResourceLimit"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_24"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_10"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sin_or_cos<float>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="rotation_theta_read_read_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="32" slack="0"/>
+<pin id="42" dir="0" index="1" bw="32" slack="0"/>
+<pin id="43" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rotation_theta_read/1 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="sin_or_cos_read_read_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="1" slack="0"/>
+<pin id="48" dir="0" index="1" bw="1" slack="0"/>
+<pin id="49" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="sin_or_cos_read/20 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="add_or_sub_read_read_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="1" slack="0"/>
+<pin id="54" dir="0" index="1" bw="1" slack="0"/>
+<pin id="55" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="add_or_sub_read/20 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1005" name="retval_0_reg_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="32" slack="2147483647"/>
+<pin id="60" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="retval_0 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="61" class="1004" name="retval_0_phi_fu_61">
+<pin_list>
+<pin id="62" dir="0" index="0" bw="32" slack="0"/>
+<pin id="63" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="64" dir="0" index="2" bw="32" slack="1"/>
+<pin id="65" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="66" dir="0" index="4" bw="32" slack="1"/>
+<pin id="67" dir="0" index="5" bw="0" slack="2147483647"/>
+<pin id="68" dir="1" index="6" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="retval_0/23 "/>
+</bind>
+</comp>
+
+<comp id="69" class="1004" name="grp_fu_69">
+<pin_list>
+<pin id="74" dir="0" index="0" bw="32" slack="1"/>
+<pin id="75" dir="0" index="1" bw="32" slack="0"/>
+<pin id="76" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="x_assign/17 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="grp_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="32" slack="0"/>
+<pin id="84" dir="0" index="1" bw="32" slack="0"/>
+<pin id="85" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fdiv(16) " fcode="fdiv"/>
+<opset="div/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="grp_sin_or_cos_float_s_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="32" slack="0"/>
+<pin id="90" dir="0" index="1" bw="32" slack="1"/>
+<pin id="91" dir="0" index="2" bw="1" slack="0"/>
+<pin id="92" dir="0" index="3" bw="100" slack="0"/>
+<pin id="93" dir="0" index="4" bw="30" slack="0"/>
+<pin id="94" dir="0" index="5" bw="23" slack="0"/>
+<pin id="95" dir="0" index="6" bw="15" slack="0"/>
+<pin id="96" dir="1" index="7" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="tmp/21 tmp_s/24 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="xor_ln27_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="1" slack="0"/>
+<pin id="106" dir="0" index="1" bw="1" slack="0"/>
+<pin id="107" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="xor(25) " fcode="xor"/>
+<opset="xor_ln27/20 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1004" name="or_ln27_fu_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="1" slack="0"/>
+<pin id="112" dir="0" index="1" bw="1" slack="0"/>
+<pin id="113" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln27/20 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="xor_ln29_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="1" slack="0"/>
+<pin id="118" dir="0" index="1" bw="1" slack="0"/>
+<pin id="119" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="xor(25) " fcode="xor"/>
+<opset="xor_ln29/20 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1004" name="or_ln29_fu_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="1" slack="0"/>
+<pin id="124" dir="0" index="1" bw="1" slack="0"/>
+<pin id="125" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln29/20 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="bitcast_ln32_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="32" slack="1"/>
+<pin id="130" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln32/23 "/>
+</bind>
+</comp>
+
+<comp id="131" class="1004" name="xor_ln32_fu_131">
+<pin_list>
+<pin id="132" dir="0" index="0" bw="32" slack="0"/>
+<pin id="133" dir="0" index="1" bw="32" slack="0"/>
+<pin id="134" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="xor(25) " fcode="xor"/>
+<opset="xor_ln32/23 "/>
+</bind>
+</comp>
+
+<comp id="137" class="1004" name="bitcast_ln32_1_fu_137">
+<pin_list>
+<pin id="138" dir="0" index="0" bw="32" slack="0"/>
+<pin id="139" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln32_1/23 "/>
+</bind>
+</comp>
+
+<comp id="142" class="1005" name="rotation_theta_read_reg_142">
+<pin_list>
+<pin id="143" dir="0" index="0" bw="32" slack="1"/>
+<pin id="144" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rotation_theta_read "/>
+</bind>
+</comp>
+
+<comp id="147" class="1005" name="div_reg_147">
+<pin_list>
+<pin id="148" dir="0" index="0" bw="32" slack="1"/>
+<pin id="149" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="div "/>
+</bind>
+</comp>
+
+<comp id="152" class="1005" name="or_ln27_reg_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="1" slack="3"/>
+<pin id="154" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="or_ln27 "/>
+</bind>
+</comp>
+
+<comp id="156" class="1005" name="x_assign_reg_156">
+<pin_list>
+<pin id="157" dir="0" index="0" bw="32" slack="1"/>
+<pin id="158" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_assign "/>
+</bind>
+</comp>
+
+<comp id="161" class="1005" name="or_ln29_reg_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="1" slack="3"/>
+<pin id="163" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="or_ln29 "/>
+</bind>
+</comp>
+
+<comp id="165" class="1005" name="tmp_reg_165">
+<pin_list>
+<pin id="166" dir="0" index="0" bw="32" slack="1"/>
+<pin id="167" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp "/>
+</bind>
+</comp>
+
+<comp id="170" class="1005" name="tmp_s_reg_170">
+<pin_list>
+<pin id="171" dir="0" index="0" bw="32" slack="1"/>
+<pin id="172" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_s "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="44"><net_src comp="14" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="45"><net_src comp="0" pin="0"/><net_sink comp="40" pin=1"/></net>
+
+<net id="50"><net_src comp="20" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="51"><net_src comp="4" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+<net id="56"><net_src comp="20" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="57"><net_src comp="2" pin="0"/><net_sink comp="52" pin=1"/></net>
+
+<net id="77"><net_src comp="18" pin="0"/><net_sink comp="69" pin=1"/></net>
+
+<net id="86"><net_src comp="40" pin="2"/><net_sink comp="82" pin=0"/></net>
+
+<net id="87"><net_src comp="16" pin="0"/><net_sink comp="82" pin=1"/></net>
+
+<net id="97"><net_src comp="34" pin="0"/><net_sink comp="88" pin=0"/></net>
+
+<net id="98"><net_src comp="32" pin="0"/><net_sink comp="88" pin=2"/></net>
+
+<net id="99"><net_src comp="6" pin="0"/><net_sink comp="88" pin=3"/></net>
+
+<net id="100"><net_src comp="8" pin="0"/><net_sink comp="88" pin=4"/></net>
+
+<net id="101"><net_src comp="10" pin="0"/><net_sink comp="88" pin=5"/></net>
+
+<net id="102"><net_src comp="12" pin="0"/><net_sink comp="88" pin=6"/></net>
+
+<net id="103"><net_src comp="38" pin="0"/><net_sink comp="88" pin=2"/></net>
+
+<net id="108"><net_src comp="52" pin="2"/><net_sink comp="104" pin=0"/></net>
+
+<net id="109"><net_src comp="32" pin="0"/><net_sink comp="104" pin=1"/></net>
+
+<net id="114"><net_src comp="46" pin="2"/><net_sink comp="110" pin=0"/></net>
+
+<net id="115"><net_src comp="104" pin="2"/><net_sink comp="110" pin=1"/></net>
+
+<net id="120"><net_src comp="46" pin="2"/><net_sink comp="116" pin=0"/></net>
+
+<net id="121"><net_src comp="32" pin="0"/><net_sink comp="116" pin=1"/></net>
+
+<net id="126"><net_src comp="104" pin="2"/><net_sink comp="122" pin=0"/></net>
+
+<net id="127"><net_src comp="116" pin="2"/><net_sink comp="122" pin=1"/></net>
+
+<net id="135"><net_src comp="128" pin="1"/><net_sink comp="131" pin=0"/></net>
+
+<net id="136"><net_src comp="36" pin="0"/><net_sink comp="131" pin=1"/></net>
+
+<net id="140"><net_src comp="131" pin="2"/><net_sink comp="137" pin=0"/></net>
+
+<net id="141"><net_src comp="137" pin="1"/><net_sink comp="61" pin=0"/></net>
+
+<net id="145"><net_src comp="40" pin="2"/><net_sink comp="142" pin=0"/></net>
+
+<net id="146"><net_src comp="142" pin="1"/><net_sink comp="82" pin=0"/></net>
+
+<net id="150"><net_src comp="82" pin="2"/><net_sink comp="147" pin=0"/></net>
+
+<net id="151"><net_src comp="147" pin="1"/><net_sink comp="69" pin=0"/></net>
+
+<net id="155"><net_src comp="110" pin="2"/><net_sink comp="152" pin=0"/></net>
+
+<net id="159"><net_src comp="69" pin="2"/><net_sink comp="156" pin=0"/></net>
+
+<net id="160"><net_src comp="156" pin="1"/><net_sink comp="88" pin=1"/></net>
+
+<net id="164"><net_src comp="122" pin="2"/><net_sink comp="161" pin=0"/></net>
+
+<net id="168"><net_src comp="88" pin="7"/><net_sink comp="165" pin=0"/></net>
+
+<net id="169"><net_src comp="165" pin="1"/><net_sink comp="61" pin=2"/></net>
+
+<net id="173"><net_src comp="88" pin="7"/><net_sink comp="170" pin=0"/></net>
+
+<net id="174"><net_src comp="170" pin="1"/><net_sink comp="128" pin=0"/></net>
+
+<net id="175"><net_src comp="170" pin="1"/><net_sink comp="61" pin=4"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: rotation_matrix_initial : rotation_theta | {1 }
+	Port: rotation_matrix_initial : add_or_sub | {20 }
+	Port: rotation_matrix_initial : sin_or_cos | {20 }
+	Port: rotation_matrix_initial : ref_4oPi_table_100_V | {21 22 24 25 }
+	Port: rotation_matrix_initial : second_order_float_sin_cos_K0_V | {21 22 24 25 }
+	Port: rotation_matrix_initial : second_order_float_sin_cos_K1_V | {21 22 24 25 }
+	Port: rotation_matrix_initial : second_order_float_sin_cos_K2_V | {21 22 24 25 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+		xor_ln32 : 1
+		bitcast_ln32_1 : 1
+		retval_0 : 2
+		ret_ln33 : 3
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------|---------|---------|---------|---------|
+| Operation|         Functional Unit        |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------|---------|---------|---------|---------|
+|   call   |  grp_sin_or_cos_float_s_fu_88  |    9    |  22.232 |   1920  |   2447  |
+|----------|--------------------------------|---------|---------|---------|---------|
+|   fmul   |            grp_fu_69           |    3    |    0    |   143   |   321   |
+|----------|--------------------------------|---------|---------|---------|---------|
+|          |         xor_ln27_fu_104        |    0    |    0    |    0    |    2    |
+|    xor   |         xor_ln29_fu_116        |    0    |    0    |    0    |    2    |
+|          |         xor_ln32_fu_131        |    0    |    0    |    0    |    32   |
+|----------|--------------------------------|---------|---------|---------|---------|
+|    or    |         or_ln27_fu_110         |    0    |    0    |    0    |    2    |
+|          |         or_ln29_fu_122         |    0    |    0    |    0    |    2    |
+|----------|--------------------------------|---------|---------|---------|---------|
+|          | rotation_theta_read_read_fu_40 |    0    |    0    |    0    |    0    |
+|   read   |   sin_or_cos_read_read_fu_46   |    0    |    0    |    0    |    0    |
+|          |   add_or_sub_read_read_fu_52   |    0    |    0    |    0    |    0    |
+|----------|--------------------------------|---------|---------|---------|---------|
+|   fdiv   |            grp_fu_82           |    0    |    0    |    0    |    0    |
+|----------|--------------------------------|---------|---------|---------|---------|
+|   Total  |                                |    12   |  22.232 |   2063  |   2808  |
+|----------|--------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------------+--------+
+|                           |   FF   |
++---------------------------+--------+
+|        div_reg_147        |   32   |
+|      or_ln27_reg_152      |    1   |
+|      or_ln29_reg_161      |    1   |
+|      retval_0_reg_58      |   32   |
+|rotation_theta_read_reg_142|   32   |
+|        tmp_reg_165        |   32   |
+|       tmp_s_reg_170       |   32   |
+|      x_assign_reg_156     |   32   |
++---------------------------+--------+
+|           Total           |   194  |
++---------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------------|------|------|------|--------||---------||---------|
+|             Comp             |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------------------|------|------|------|--------||---------||---------|
+|           grp_fu_82          |  p0  |   2  |  32  |   64   ||    9    |
+| grp_sin_or_cos_float_s_fu_88 |  p2  |   2  |   1  |    2   |
+|------------------------------|------|------|------|--------||---------||---------|
+|             Total            |      |      |      |   66   ||  3.176  ||    9    |
+|------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   12   |   22   |  2063  |  2808  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    3   |    -   |    9   |
+|  Register |    -   |    -   |   194  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   12   |   25   |  2257  |  2817  |
++-----------+--------+--------+--------+--------+

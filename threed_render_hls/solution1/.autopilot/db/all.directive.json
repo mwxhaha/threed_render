@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "threed_render_hls",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "E:\/fpga\/fpgacamp2023\/threed_render\/threed_render_hls\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "threed_render_hls"
+              }]
+          }
+        },
+        {
+          "functionName": "threed_render_hls",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "E:\/fpga\/fpgacamp2023\/threed_render\/threed_render_hls\/solution1\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "threed_render_hls"
+              }]
+          }
+        }
+      ]
+    }]}

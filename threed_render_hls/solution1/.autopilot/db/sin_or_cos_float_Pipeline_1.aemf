@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1689675131565">
+  <ports id="1" name="p_Result_88" type="PortType" coreId="1935421998" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_Result_87" type="PortType" coreId="1668445020" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="c_0_023_out" type="PortType" coreId="1936484444" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="c_1_022_out" type="PortType" coreId="1550021235" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="45" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="47" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="50" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="51" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="56" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.2"/>
+  <edges id="57" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="59" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@ports.3"/>
+  <edges id="60" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="61" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="69" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="71" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="117" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="121" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="122" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="123" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="124" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="125" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <blocks id="12" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc42.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i" originalName="i" coreId="1701080941" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="c_1" originalName="c[1]" coreId="875634732" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="c_1_3" originalName="c[1]" coreId="1398032706" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="p_Result_87_read" coreId="1113542744" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>p_Result_87</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="p_Result_88_read" coreId="641618772" bitwidth="32" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>p_Result_88</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_write_ln0" coreId="1480931898" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln0" coreId="1229086544" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc42.i</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="38" name="for.end44.i.exitStub" type="BlockType">
+    <controlInputObjs>for.inc42.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="c_1_load" coreId="1013280889" bitwidth="32" opcode="load" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="c_1_3_load" coreId="1936484444" bitwidth="32" opcode="load" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="c_0_023_out_write_ln0" coreId="539767593" opcode="write" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>c_0_023_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="c_1_022_out_write_ln0" coreId="1717530721" opcode="write" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>c_1_022_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln0" coreId="694510703" opcode="ret" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="136" pipe_depth="1" RegionName="Loop 1">
+    <basic_blocks id="19" name="for.inc42.i" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc42.i.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end44.i.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc42.i.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_6" lineNumber="553" originalName="i" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="977167724" contextFuncName="to_uint" bitwidth="2" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="553" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="to_uint"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="icmp_ln311_fu_86_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.95" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="add_ln311_fu_92_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="2" opcode="add" m_display="0" m_delay="1.56" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="741423164" contextFuncName="scaled_fixed2ieee_29_1_s" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc42.i.split</controlInputObjs>
+        <controlInputObjs>for.end44.i.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h">
+        <validLinenumbers>553</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h">
+        <validLinenumbers>311</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="32" name="for.inc42.i.split" type="BlockType">
+      <controlInputObjs>for.inc42.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc42.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="c_1_load_1" lineNumber="312" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1920213036" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="load" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="312" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="c_1_3_load_1" lineNumber="312" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="825499692" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="load" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="312" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln553" lineNumber="553" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="trunc_ln553_fu_104_p1" coreId="892416316" contextFuncName="to_uint" bitwidth="1" opcode="trunc" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="553" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="to_uint"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="p_Val2_s" lineNumber="553" originalName="value" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Val2_s_fu_108_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_uint" bitwidth="32" opcode="select" m_display="0" m_delay="0.69" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="553" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="to_uint"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="p_Result_s" lineNumber="1197" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_s_fu_116_p4" coreId="1668504634" contextFuncName="countLeadingZeros" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1197" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="countLeadingZeros"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>cttz</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="c_0" lineNumber="1199" originalName="c[0]" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="c_0_fu_126_p3" coreId="1920234335" contextFuncName="countLeadingZeros" bitwidth="32" opcode="cttz" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1199" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="countLeadingZeros"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="c_1_5" lineNumber="312" originalName="c[1]" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="c_1_5_fu_134_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="select" m_display="0" m_delay="0.69" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="312" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>cttz</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="c_1_6" lineNumber="312" originalName="c[1]" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="c_1_6_fu_142_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="select" m_display="0" m_delay="0.69" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="312" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>cttz</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="c_1_3_write_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1702195828" contextFuncName="scaled_fixed2ieee_29_1_s" opcode="store" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="c_1_write_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1768713801" contextFuncName="scaled_fixed2ieee_29_1_s" opcode="store" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="i_write_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1818455657" contextFuncName="scaled_fixed2ieee_29_1_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1768316784" contextFuncName="scaled_fixed2ieee_29_1_s" opcode="br" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+        <controlInputObjs>for.inc42.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h">
+        <validLinenumbers>553</validLinenumbers>
+        <validLinenumbers>1197</validLinenumbers>
+        <validLinenumbers>1199</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h">
+        <validLinenumbers>312</validLinenumbers>
+        <validLinenumbers>311</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="i_reg_173">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="c_1_reg_180">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="c_1_3_reg_187">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <expressionNodes realName="p_Result_s_fu_116">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln553_fu_104">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln311_fu_92">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_1_3_fu_48">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_1_5_fu_134">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_40">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_1_6_fu_142">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln311_fu_86">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_1_fu_44">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_s_fu_108">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_0_fu_126">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="p_Result_88_read_read_fu_58">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_1_load_load_fu_165">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_1_load_1_load_fu_98">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_1_3_load_1_load_fu_101">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln311_store_fu_160">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_1_3_load_load_fu_169">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_64">
+    <nodeIds>35</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln311_store_fu_150">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_71">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_6_load_fu_83">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_78">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_Result_87_read_read_fu_52">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln311_store_fu_155">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioPorts name="c_0_023_out">
+    <contents name="write">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c_1_022_out">
+    <contents name="write">
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_Result_87">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_Result_88">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sin_or_cos_float_Pipeline_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4" mMaxLatency="4">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>12</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop_1" mII="1" mDepth="1" mMinTripCount="2" mMaxTripCount="2" mMinLatency="2" mMaxLatency="2" mType="1">
+      <basicBlocks>19</basicBlocks>
+      <basicBlocks>32</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

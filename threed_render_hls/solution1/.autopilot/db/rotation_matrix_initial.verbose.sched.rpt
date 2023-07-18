@@ -1,0 +1,341 @@
+
+
+================================================================
+== Vitis HLS Report for 'rotation_matrix_initial'
+================================================================
+* Date:           Tue Jul 18 18:11:59 2023
+
+* Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+* Project:        threed_render_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.120 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       52|       53|  0.520 us|  0.530 us|   52|   53|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 24 
+21 --> 22 
+22 --> 23 
+23 --> 
+24 --> 25 
+25 --> 23 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.07>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%rotation_theta_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %rotation_theta" [src/threed_render_hls.cpp:21]   --->   Operation 26 'read' 'rotation_theta_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [16/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 27 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.07>
+ST_2 : Operation 28 [15/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 28 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.07>
+ST_3 : Operation 29 [14/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 29 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.07>
+ST_4 : Operation 30 [13/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 30 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.07>
+ST_5 : Operation 31 [12/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 31 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.07>
+ST_6 : Operation 32 [11/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 32 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.07>
+ST_7 : Operation 33 [10/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 33 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.07>
+ST_8 : Operation 34 [9/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 34 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.07>
+ST_9 : Operation 35 [8/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 35 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.07>
+ST_10 : Operation 36 [7/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 36 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.07>
+ST_11 : Operation 37 [6/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 37 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.07>
+ST_12 : Operation 38 [5/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 38 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.07>
+ST_13 : Operation 39 [4/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 39 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.07>
+ST_14 : Operation 40 [3/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 40 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.07>
+ST_15 : Operation 41 [2/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 41 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.07>
+ST_16 : Operation 42 [1/16] (6.07ns)   --->   "%div = fdiv i32 %rotation_theta_read, i32 180" [src/threed_render_hls.cpp:28]   --->   Operation 42 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 5.70>
+ST_17 : Operation 43 [4/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 43 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 5.70>
+ST_18 : Operation 44 [3/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 44 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 5.70>
+ST_19 : Operation 45 [2/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 45 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 5.70>
+ST_20 : Operation 46 [1/1] (0.00ns)   --->   "%sin_or_cos_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %sin_or_cos" [src/threed_render_hls.cpp:21]   --->   Operation 46 'read' 'sin_or_cos_read' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 47 [1/1] (0.00ns)   --->   "%add_or_sub_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %add_or_sub" [src/threed_render_hls.cpp:21]   --->   Operation 47 'read' 'add_or_sub_read' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 48 [1/1] (0.00ns)   --->   "%specresourcelimit_ln24 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_24, void @empty_8, void @empty_8, void @empty_8" [src/threed_render_hls.cpp:24]   --->   Operation 48 'specresourcelimit' 'specresourcelimit_ln24' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 49 [1/1] (0.00ns)   --->   "%specresourcelimit_ln25 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_10, void @empty_8, void @empty_8, void @empty_8" [src/threed_render_hls.cpp:25]   --->   Operation 49 'specresourcelimit' 'specresourcelimit_ln25' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 50 [1/1] (0.97ns)   --->   "%xor_ln27 = xor i1 %add_or_sub_read, i1 1" [src/threed_render_hls.cpp:27]   --->   Operation 50 'xor' 'xor_ln27' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 51 [1/1] (0.97ns)   --->   "%or_ln27 = or i1 %sin_or_cos_read, i1 %xor_ln27" [src/threed_render_hls.cpp:27]   --->   Operation 51 'or' 'or_ln27' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 52 [1/4] (5.70ns)   --->   "%x_assign = fmul i32 %div, i32 3.14159" [src/threed_render_hls.cpp:28]   --->   Operation 52 'fmul' 'x_assign' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln27 = br i1 %or_ln27, void %if.then, void %if.else" [src/threed_render_hls.cpp:27]   --->   Operation 53 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node or_ln29)   --->   "%xor_ln29 = xor i1 %sin_or_cos_read, i1 1" [src/threed_render_hls.cpp:29]   --->   Operation 54 'xor' 'xor_ln29' <Predicate = (or_ln27)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 55 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln29 = or i1 %xor_ln27, i1 %xor_ln29" [src/threed_render_hls.cpp:29]   --->   Operation 55 'or' 'or_ln29' <Predicate = (or_ln27)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 5.46>
+ST_21 : Operation 56 [2/2] (5.46ns)   --->   "%tmp = call i32 @sin_or_cos<float>, i32 %x_assign, i1 1, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127]   --->   Operation 56 'call' 'tmp' <Predicate = true> <Delay = 5.46> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 7.12>
+ST_22 : Operation 57 [1/2] (7.12ns)   --->   "%tmp = call i32 @sin_or_cos<float>, i32 %x_assign, i1 1, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127]   --->   Operation 57 'call' 'tmp' <Predicate = true> <Delay = 7.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 2.70>
+ST_23 : Operation 58 [1/1] (1.70ns)   --->   "%br_ln28 = br void %cleanup" [src/threed_render_hls.cpp:28]   --->   Operation 58 'br' 'br_ln28' <Predicate = (!or_ln27)> <Delay = 1.70>
+ST_23 : Operation 59 [1/1] (1.70ns)   --->   "%br_ln29 = br i1 %or_ln29, void %cleanup, void %if.else6" [src/threed_render_hls.cpp:29]   --->   Operation 59 'br' 'br_ln29' <Predicate = (or_ln27)> <Delay = 1.70>
+ST_23 : Operation 60 [1/1] (0.00ns)   --->   "%bitcast_ln32 = bitcast i32 %tmp_s" [src/threed_render_hls.cpp:32]   --->   Operation 60 'bitcast' 'bitcast_ln32' <Predicate = (or_ln27 & or_ln29)> <Delay = 0.00>
+ST_23 : Operation 61 [1/1] (0.99ns)   --->   "%xor_ln32 = xor i32 %bitcast_ln32, i32 2147483648" [src/threed_render_hls.cpp:32]   --->   Operation 61 'xor' 'xor_ln32' <Predicate = (or_ln27 & or_ln29)> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 62 [1/1] (0.00ns)   --->   "%bitcast_ln32_1 = bitcast i32 %xor_ln32" [src/threed_render_hls.cpp:32]   --->   Operation 62 'bitcast' 'bitcast_ln32_1' <Predicate = (or_ln27 & or_ln29)> <Delay = 0.00>
+ST_23 : Operation 63 [1/1] (1.70ns)   --->   "%br_ln32 = br void %cleanup" [src/threed_render_hls.cpp:32]   --->   Operation 63 'br' 'br_ln32' <Predicate = (or_ln27 & or_ln29)> <Delay = 1.70>
+ST_23 : Operation 64 [1/1] (0.00ns)   --->   "%retval_0 = phi i32 %bitcast_ln32_1, void %if.else6, i32 %tmp, void %if.then, i32 %tmp_s, void %if.else" [src/threed_render_hls.cpp:32]   --->   Operation 64 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln33 = ret i32 %retval_0" [src/threed_render_hls.cpp:33]   --->   Operation 65 'ret' 'ret_ln33' <Predicate = true> <Delay = 0.00>
+
+State 24 <SV = 20> <Delay = 5.46>
+ST_24 : Operation 66 [2/2] (5.46ns)   --->   "%tmp_s = call i32 @sin_or_cos<float>, i32 %x_assign, i1 0, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123]   --->   Operation 66 'call' 'tmp_s' <Predicate = true> <Delay = 5.46> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 21> <Delay = 7.12>
+ST_25 : Operation 67 [1/2] (7.12ns)   --->   "%tmp_s = call i32 @sin_or_cos<float>, i32 %x_assign, i1 0, i100 %ref_4oPi_table_100_V, i30 %second_order_float_sin_cos_K0_V, i23 %second_order_float_sin_cos_K1_V, i15 %second_order_float_sin_cos_K2_V" [C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123]   --->   Operation 67 'call' 'tmp_s' <Predicate = true> <Delay = 7.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.08ns
+The critical path consists of the following:
+	wire read operation ('rotation_theta', src/threed_render_hls.cpp:21) on port 'rotation_theta' (src/threed_render_hls.cpp:21) [10]  (0 ns)
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 2>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 3>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 4>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 5>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 6>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 7>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 8>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 9>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 10>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 11>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 12>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 13>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 14>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 15>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 16>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('div', src/threed_render_hls.cpp:28) [15]  (6.08 ns)
+
+ <State 17>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('x', src/threed_render_hls.cpp:28) [16]  (5.7 ns)
+
+ <State 18>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('x', src/threed_render_hls.cpp:28) [16]  (5.7 ns)
+
+ <State 19>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('x', src/threed_render_hls.cpp:28) [16]  (5.7 ns)
+
+ <State 20>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('x', src/threed_render_hls.cpp:28) [16]  (5.7 ns)
+
+ <State 21>: 5.47ns
+The critical path consists of the following:
+	'call' operation ('tmp', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127) to 'sin_or_cos<float>' [19]  (5.47 ns)
+
+ <State 22>: 7.12ns
+The critical path consists of the following:
+	'call' operation ('tmp', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127) to 'sin_or_cos<float>' [19]  (7.12 ns)
+
+ <State 23>: 2.7ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln32', src/threed_render_hls.cpp:32) [28]  (0.993 ns)
+	multiplexor before 'phi' operation ('retval_0', src/threed_render_hls.cpp:32) with incoming values : ('tmp', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127) ('tmp_s', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123) ('bitcast_ln32_1', src/threed_render_hls.cpp:32) [32]  (1.71 ns)
+	'phi' operation ('retval_0', src/threed_render_hls.cpp:32) with incoming values : ('tmp', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:127) ('tmp_s', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123) ('bitcast_ln32_1', src/threed_render_hls.cpp:32) [32]  (0 ns)
+
+ <State 24>: 5.47ns
+The critical path consists of the following:
+	'call' operation ('tmp_s', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123) to 'sin_or_cos<float>' [24]  (5.47 ns)
+
+ <State 25>: 7.12ns
+The critical path consists of the following:
+	'call' operation ('tmp_s', C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp:123) to 'sin_or_cos<float>' [24]  (7.12 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

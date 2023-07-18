@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrix_mutiply_1'
+================================================================
+* Date:           Tue Jul 18 18:12:01 2023
+
+* Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+* Project:        threed_render_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.131 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        3|        3|  30.000 ns|  30.000 ns|    3|    3|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.70>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%input_vector_offset_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %input_vector_offset"   --->   Operation 5 'read' 'input_vector_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_read_26 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read8"   --->   Operation 6 'read' 'p_read_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_27 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read7"   --->   Operation 7 'read' 'p_read_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read626 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read6"   --->   Operation 8 'read' 'p_read626' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read525 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read5"   --->   Operation 9 'read' 'p_read525' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read424 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read4"   --->   Operation 10 'read' 'p_read424' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_read323 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read3"   --->   Operation 11 'read' 'p_read323' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_read222 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read2"   --->   Operation 12 'read' 'p_read222' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_read121 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read1"   --->   Operation 13 'read' 'p_read121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_read_28 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read"   --->   Operation 14 'read' 'p_read_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.70ns)   --->   "%r_V = mux i40 @_ssdm_op_Mux.ap_auto.3i40.i2, i40 %p_read_28, i40 %p_read121, i40 %p_read222, i2 %input_vector_offset_read"   --->   Operation 15 'mux' 'r_V' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (1.70ns)   --->   "%r_V_46 = mux i40 @_ssdm_op_Mux.ap_auto.3i40.i2, i40 %p_read323, i40 %p_read424, i40 %p_read525, i2 %input_vector_offset_read"   --->   Operation 16 'mux' 'r_V_46' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.70ns)   --->   "%r_V_48 = mux i40 @_ssdm_op_Mux.ap_auto.3i40.i2, i40 %p_read626, i40 %p_read_27, i40 %p_read_26, i2 %input_vector_offset_read"   --->   Operation 17 'mux' 'r_V_48' <Predicate = true> <Delay = 1.70> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%p_read_19 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read10"   --->   Operation 18 'read' 'p_read_19' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%p_read_20 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read811"   --->   Operation 19 'read' 'p_read_20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%p_read_21 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read5_offset"   --->   Operation 20 'read' 'p_read_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_22 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read4_offset"   --->   Operation 21 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_23 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read210"   --->   Operation 22 'read' 'p_read_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_24 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read1_offset"   --->   Operation 23 'read' 'p_read_24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%p_read_25 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read9"   --->   Operation 24 'read' 'p_read_25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln1270 = sext i40 %r_V"   --->   Operation 25 'sext' 'sext_ln1270' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%sext_ln1273 = sext i40 %p_read_25"   --->   Operation 26 'sext' 'sext_ln1273' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [2/2] (6.91ns)   --->   "%r_V_45 = mul i73 %sext_ln1273, i73 %sext_ln1270"   --->   Operation 27 'mul' 'r_V_45' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln1270_9 = sext i40 %r_V_46"   --->   Operation 28 'sext' 'sext_ln1270_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%sext_ln1273_3 = sext i40 %p_read_22"   --->   Operation 29 'sext' 'sext_ln1273_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (6.91ns)   --->   "%r_V_47 = mul i73 %sext_ln1273_3, i73 %sext_ln1270_9"   --->   Operation 30 'mul' 'r_V_47' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln1270_10 = sext i40 %r_V_48"   --->   Operation 31 'sext' 'sext_ln1270_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%sext_ln1273_4 = sext i40 %p_read_20"   --->   Operation 32 'sext' 'sext_ln1273_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [2/2] (6.91ns)   --->   "%r_V_49 = mul i73 %sext_ln1273_4, i73 %sext_ln1270_10"   --->   Operation 33 'mul' 'r_V_49' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%sext_ln1273_5 = sext i40 %p_read_24"   --->   Operation 34 'sext' 'sext_ln1273_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [2/2] (6.91ns)   --->   "%r_V_50 = mul i73 %sext_ln1273_5, i73 %sext_ln1270"   --->   Operation 35 'mul' 'r_V_50' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%sext_ln1273_6 = sext i40 %p_read_21"   --->   Operation 36 'sext' 'sext_ln1273_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [2/2] (6.91ns)   --->   "%r_V_51 = mul i73 %sext_ln1273_6, i73 %sext_ln1270_9"   --->   Operation 37 'mul' 'r_V_51' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%sext_ln1273_7 = sext i40 %p_read_23"   --->   Operation 38 'sext' 'sext_ln1273_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [2/2] (6.91ns)   --->   "%r_V_52 = mul i73 %sext_ln1273_7, i73 %sext_ln1270"   --->   Operation 39 'mul' 'r_V_52' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%sext_ln1273_8 = sext i40 %p_read_19"   --->   Operation 40 'sext' 'sext_ln1273_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [2/2] (6.91ns)   --->   "%r_V_53 = mul i73 %sext_ln1273_8, i73 %sext_ln1270_10"   --->   Operation 41 'mul' 'r_V_53' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 42 [1/2] (6.91ns)   --->   "%r_V_45 = mul i73 %sext_ln1273, i73 %sext_ln1270"   --->   Operation 42 'mul' 'r_V_45' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/2] (6.91ns)   --->   "%r_V_47 = mul i73 %sext_ln1273_3, i73 %sext_ln1270_9"   --->   Operation 43 'mul' 'r_V_47' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/2] (6.91ns)   --->   "%r_V_49 = mul i73 %sext_ln1273_4, i73 %sext_ln1270_10"   --->   Operation 44 'mul' 'r_V_49' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/2] (6.91ns)   --->   "%r_V_50 = mul i73 %sext_ln1273_5, i73 %sext_ln1270"   --->   Operation 45 'mul' 'r_V_50' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/2] (6.91ns)   --->   "%r_V_51 = mul i73 %sext_ln1273_6, i73 %sext_ln1270_9"   --->   Operation 46 'mul' 'r_V_51' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/2] (6.91ns)   --->   "%r_V_52 = mul i73 %sext_ln1273_7, i73 %sext_ln1270"   --->   Operation 47 'mul' 'r_V_52' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/2] (6.91ns)   --->   "%r_V_53 = mul i73 %sext_ln1273_8, i73 %sext_ln1270_10"   --->   Operation 48 'mul' 'r_V_53' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.13>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%output_vector_offset_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %output_vector_offset"   --->   Operation 49 'read' 'output_vector_offset_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%p_read_10 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read19"   --->   Operation 50 'read' 'p_read_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%p_read_11 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read18"   --->   Operation 51 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%p_read_12 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read17"   --->   Operation 52 'read' 'p_read_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%p_read_13 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read16"   --->   Operation 53 'read' 'p_read_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%p_read_14 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read15"   --->   Operation 54 'read' 'p_read_14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%p_read_15 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read14"   --->   Operation 55 'read' 'p_read_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%p_read_16 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read13"   --->   Operation 56 'read' 'p_read_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%p_read_17 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read12"   --->   Operation 57 'read' 'p_read_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%p_read_18 = read i40 @_ssdm_op_Read.ap_auto.i40, i40 %p_read11"   --->   Operation 58 'read' 'p_read_18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%ret_V = add i73 %r_V_47, i73 %r_V_45"   --->   Operation 59 'add' 'ret_V' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.78> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 60 [1/1] (5.57ns) (root node of TernaryAdder)   --->   "%ret_V_35 = add i73 %ret_V, i73 %r_V_49"   --->   Operation 60 'add' 'ret_V_35' <Predicate = true> <Delay = 5.57> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.78> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i40 @_ssdm_op_PartSelect.i40.i73.i32.i32, i73 %ret_V_35, i32 33, i32 72"   --->   Operation 61 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (3.77ns)   --->   "%ret_V_36 = add i73 %r_V_51, i73 %r_V_50"   --->   Operation 62 'add' 'ret_V_36' <Predicate = true> <Delay = 3.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%trunc_ln818_5 = partselect i40 @_ssdm_op_PartSelect.i40.i73.i32.i32, i73 %ret_V_36, i32 33, i32 72"   --->   Operation 63 'partselect' 'trunc_ln818_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (3.77ns)   --->   "%ret_V_37 = add i73 %r_V_52, i73 %r_V_53"   --->   Operation 64 'add' 'ret_V_37' <Predicate = true> <Delay = 3.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%trunc_ln818_6 = partselect i40 @_ssdm_op_PartSelect.i40.i73.i32.i32, i73 %ret_V_37, i32 33, i32 72"   --->   Operation 65 'partselect' 'trunc_ln818_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (1.58ns)   --->   "%switch_ln16 = switch i2 %output_vector_offset_read, void %branch2, i2 0, void %entry26, i2 1, void %branch1" [src/threed_render_hls.cpp:16]   --->   Operation 66 'switch' 'switch_ln16' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 67 [1/1] (1.58ns)   --->   "%br_ln16 = br void %entry26" [src/threed_render_hls.cpp:16]   --->   Operation 67 'br' 'br_ln16' <Predicate = (output_vector_offset_read == 1)> <Delay = 1.58>
+ST_4 : Operation 68 [1/1] (1.58ns)   --->   "%br_ln16 = br void %entry26" [src/threed_render_hls.cpp:16]   --->   Operation 68 'br' 'br_ln16' <Predicate = (output_vector_offset_read != 0 & output_vector_offset_read != 1)> <Delay = 1.58>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%write_flag17_0 = phi i1 1, void %branch2, i1 0, void %branch1, i1 0, void %entry"   --->   Operation 69 'phi' 'write_flag17_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%write_flag14_0 = phi i1 0, void %branch2, i1 1, void %branch1, i1 0, void %entry"   --->   Operation 70 'phi' 'write_flag14_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%write_flag_0 = phi i1 0, void %branch2, i1 0, void %branch1, i1 1, void %entry"   --->   Operation 71 'phi' 'write_flag_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (1.58ns)   --->   "%switch_ln17 = switch i2 %output_vector_offset_read, void %branch5, i2 0, void %entry2631, i2 1, void %branch4" [src/threed_render_hls.cpp:17]   --->   Operation 72 'switch' 'switch_ln17' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 73 [1/1] (1.58ns)   --->   "%br_ln17 = br void %entry2631" [src/threed_render_hls.cpp:17]   --->   Operation 73 'br' 'br_ln17' <Predicate = (output_vector_offset_read == 1)> <Delay = 1.58>
+ST_4 : Operation 74 [1/1] (1.58ns)   --->   "%br_ln17 = br void %entry2631" [src/threed_render_hls.cpp:17]   --->   Operation 74 'br' 'br_ln17' <Predicate = (output_vector_offset_read != 0 & output_vector_offset_read != 1)> <Delay = 1.58>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%write_flag20_0 = phi i1 0, void %branch5, i1 0, void %branch4, i1 1, void %entry26"   --->   Operation 75 'phi' 'write_flag20_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%write_flag23_0 = phi i1 0, void %branch5, i1 1, void %branch4, i1 0, void %entry26"   --->   Operation 76 'phi' 'write_flag23_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%write_flag26_0 = phi i1 1, void %branch5, i1 0, void %branch4, i1 0, void %entry26"   --->   Operation 77 'phi' 'write_flag26_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (1.58ns)   --->   "%switch_ln18 = switch i2 %output_vector_offset_read, void %branch8, i2 0, void %entry263136, i2 1, void %branch7" [src/threed_render_hls.cpp:18]   --->   Operation 78 'switch' 'switch_ln18' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 79 [1/1] (1.58ns)   --->   "%br_ln18 = br void %entry263136" [src/threed_render_hls.cpp:18]   --->   Operation 79 'br' 'br_ln18' <Predicate = (output_vector_offset_read == 1)> <Delay = 1.58>
+ST_4 : Operation 80 [1/1] (1.58ns)   --->   "%br_ln18 = br void %entry263136" [src/threed_render_hls.cpp:18]   --->   Operation 80 'br' 'br_ln18' <Predicate = (output_vector_offset_read != 0 & output_vector_offset_read != 1)> <Delay = 1.58>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%phi_ln19 = phi i40 %p_read_12, void %branch8, i40 %p_read_12, void %branch7, i40 %trunc_ln818_6, void %entry2631" [src/threed_render_hls.cpp:19]   --->   Operation 81 'phi' 'phi_ln19' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%phi_ln19_1 = phi i40 %p_read_11, void %branch8, i40 %trunc_ln818_6, void %branch7, i40 %p_read_11, void %entry2631" [src/threed_render_hls.cpp:19]   --->   Operation 82 'phi' 'phi_ln19_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%phi_ln19_2 = phi i40 %trunc_ln818_6, void %branch8, i40 %p_read_10, void %branch7, i40 %p_read_10, void %entry2631" [src/threed_render_hls.cpp:19]   --->   Operation 83 'phi' 'phi_ln19_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (1.56ns)   --->   "%select_ln19 = select i1 %write_flag_0, i40 %trunc_ln, i40 %p_read_18" [src/threed_render_hls.cpp:19]   --->   Operation 84 'select' 'select_ln19' <Predicate = true> <Delay = 1.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 85 [1/1] (1.56ns)   --->   "%select_ln19_1 = select i1 %write_flag14_0, i40 %trunc_ln, i40 %p_read_17" [src/threed_render_hls.cpp:19]   --->   Operation 85 'select' 'select_ln19_1' <Predicate = true> <Delay = 1.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 86 [1/1] (1.56ns)   --->   "%select_ln19_2 = select i1 %write_flag17_0, i40 %trunc_ln, i40 %p_read_16" [src/threed_render_hls.cpp:19]   --->   Operation 86 'select' 'select_ln19_2' <Predicate = true> <Delay = 1.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (1.56ns)   --->   "%select_ln19_3 = select i1 %write_flag20_0, i40 %trunc_ln818_5, i40 %p_read_15" [src/threed_render_hls.cpp:19]   --->   Operation 87 'select' 'select_ln19_3' <Predicate = true> <Delay = 1.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 88 [1/1] (1.56ns)   --->   "%select_ln19_4 = select i1 %write_flag23_0, i40 %trunc_ln818_5, i40 %p_read_14" [src/threed_render_hls.cpp:19]   --->   Operation 88 'select' 'select_ln19_4' <Predicate = true> <Delay = 1.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 89 [1/1] (1.56ns)   --->   "%select_ln19_5 = select i1 %write_flag26_0, i40 %trunc_ln818_5, i40 %p_read_13" [src/threed_render_hls.cpp:19]   --->   Operation 89 'select' 'select_ln19_5' <Predicate = true> <Delay = 1.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%mrv = insertvalue i360 <undef>, i40 %select_ln19" [src/threed_render_hls.cpp:19]   --->   Operation 90 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i360 %mrv, i40 %select_ln19_1" [src/threed_render_hls.cpp:19]   --->   Operation 91 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i360 %mrv_1, i40 %select_ln19_2" [src/threed_render_hls.cpp:19]   --->   Operation 92 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i360 %mrv_2, i40 %select_ln19_3" [src/threed_render_hls.cpp:19]   --->   Operation 93 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i360 %mrv_3, i40 %select_ln19_4" [src/threed_render_hls.cpp:19]   --->   Operation 94 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i360 %mrv_4, i40 %select_ln19_5" [src/threed_render_hls.cpp:19]   --->   Operation 95 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i360 %mrv_5, i40 %phi_ln19" [src/threed_render_hls.cpp:19]   --->   Operation 96 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue i360 %mrv_6, i40 %phi_ln19_1" [src/threed_render_hls.cpp:19]   --->   Operation 97 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue i360 %mrv_7, i40 %phi_ln19_2" [src/threed_render_hls.cpp:19]   --->   Operation 98 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%ret_ln19 = ret i360 %mrv_8" [src/threed_render_hls.cpp:19]   --->   Operation 99 'ret' 'ret_ln19' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.71ns
+The critical path consists of the following:
+	wire read operation ('input_vector_offset_read') on port 'input_vector_offset' [45]  (0 ns)
+	'mux' operation ('r.V') [55]  (1.71 ns)
+
+ <State 2>: 6.91ns
+The critical path consists of the following:
+	wire read operation ('p_read_25') on port 'p_read9' [44]  (0 ns)
+	'mul' operation ('r.V') [58]  (6.91 ns)
+
+ <State 3>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('r.V') [58]  (6.91 ns)
+
+ <State 4>: 7.13ns
+The critical path consists of the following:
+	'add' operation ('ret.V') [63]  (0 ns)
+	'add' operation ('ret.V') [68]  (5.57 ns)
+	'select' operation ('select_ln19', src/threed_render_hls.cpp:19) [109]  (1.56 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

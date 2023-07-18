@@ -1,0 +1,2128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1689675133779">
+  <ports id="1" name="t_in" type="PortType" coreId="1550021235" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="do_cos" type="PortType" originalName="results.exp.V" coreId="1935421998" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="12" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="161" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="164" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="172" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="175" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="186" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="189" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="193" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="196" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="201" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="202" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="205" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="208" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="211" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="217" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="220" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="222" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="223" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="225" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="228" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="233" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="234" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="235" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="238" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="245" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="252" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="254" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="257" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="258" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="260" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="261" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="264" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="265" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="266" source_obj="//@blocks.0/@node_objs.35" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="267" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="270" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="277" source_obj="//@blocks.0/@node_objs.37" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="281" source_obj="//@blocks.0/@node_objs.38" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="288" source_obj="//@blocks.0/@node_objs.39" sink_obj="//@blocks.0/@node_objs.40"/>
+  <edges id="289" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@blocks.0/@node_objs.41"/>
+  <edges id="292" source_obj="//@blocks.0/@node_objs.41" sink_obj="//@blocks.0/@node_objs.42"/>
+  <edges id="294" source_obj="//@blocks.0/@node_objs.42" sink_obj="//@blocks.0/@node_objs.43"/>
+  <edges id="295" source_obj="//@blocks.0/@node_objs.43" sink_obj="//@blocks.0/@node_objs.44"/>
+  <edges id="296" source_obj="//@blocks.0/@node_objs.43" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="297" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.46"/>
+  <edges id="298" source_obj="//@blocks.0/@node_objs.45" sink_obj="//@blocks.0/@node_objs.46"/>
+  <edges id="300" source_obj="//@blocks.0/@node_objs.46" sink_obj="//@blocks.0/@node_objs.47"/>
+  <edges id="303" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.48"/>
+  <edges id="304" source_obj="//@blocks.0/@node_objs.44" sink_obj="//@blocks.0/@node_objs.48"/>
+  <edges id="305" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="308" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.0/@node_objs.50"/>
+  <edges id="312" source_obj="//@blocks.0/@node_objs.49" sink_obj="//@blocks.0/@node_objs.51"/>
+  <edges id="313" source_obj="//@blocks.0/@node_objs.50" sink_obj="//@blocks.0/@node_objs.52"/>
+  <edges id="314" source_obj="//@blocks.0/@node_objs.51" sink_obj="//@blocks.0/@node_objs.52"/>
+  <edges id="315" source_obj="//@blocks.0/@node_objs.49" sink_obj="//@blocks.0/@node_objs.52"/>
+  <edges id="316" source_obj="//@blocks.0/@node_objs.52" sink_obj="//@blocks.0/@node_objs.53"/>
+  <edges id="317" source_obj="//@blocks.0/@node_objs.47" sink_obj="//@blocks.0/@node_objs.54"/>
+  <edges id="318" source_obj="//@blocks.0/@node_objs.54" sink_obj="//@blocks.0/@node_objs.55"/>
+  <edges id="319" source_obj="//@blocks.0/@node_objs.53" sink_obj="//@blocks.0/@node_objs.55"/>
+  <edges id="320" source_obj="//@blocks.0/@node_objs.54" sink_obj="//@blocks.0/@node_objs.56"/>
+  <edges id="321" source_obj="//@blocks.0/@node_objs.53" sink_obj="//@blocks.0/@node_objs.56"/>
+  <edges id="322" source_obj="//@blocks.0/@node_objs.50" sink_obj="//@blocks.0/@node_objs.57"/>
+  <edges id="323" source_obj="//@blocks.0/@node_objs.55" sink_obj="//@blocks.0/@node_objs.57"/>
+  <edges id="324" source_obj="//@blocks.0/@node_objs.56" sink_obj="//@blocks.0/@node_objs.57"/>
+  <edges id="325" source_obj="//@blocks.0/@node_objs.57" sink_obj="//@blocks.0/@node_objs.58"/>
+  <edges id="337" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.59"/>
+  <edges id="338" source_obj="//@blocks.0/@node_objs.59" sink_obj="//@blocks.0/@node_objs.60"/>
+  <edges id="340" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.61"/>
+  <edges id="341" source_obj="//@blocks.0/@node_objs.60" sink_obj="//@blocks.0/@node_objs.61"/>
+  <edges id="342" source_obj="//@blocks.0/@node_objs.59" sink_obj="//@blocks.0/@node_objs.61"/>
+  <edges id="343" source_obj="//@blocks.0/@node_objs.61" sink_obj="//@blocks.0/@node_objs.62"/>
+  <edges id="346" source_obj="//@blocks.0/@node_objs.47" sink_obj="//@blocks.0/@node_objs.62"/>
+  <edges id="349" source_obj="//@blocks.0/@node_objs.57" sink_obj="//@blocks.0/@node_objs.63"/>
+  <edges id="356" source_obj="//@blocks.0/@node_objs.57" sink_obj="//@blocks.0/@node_objs.64"/>
+  <edges id="360" source_obj="//@blocks.0/@node_objs.64" sink_obj="//@blocks.0/@node_objs.65"/>
+  <edges id="361" source_obj="//@blocks.0/@node_objs.65" sink_obj="//@blocks.0/@node_objs.66"/>
+  <edges id="362" source_obj="//@blocks.0/@node_objs.65" sink_obj="//@blocks.0/@node_objs.66"/>
+  <edges id="365" source_obj="//@blocks.0/@node_objs.66" sink_obj="//@blocks.0/@node_objs.67"/>
+  <edges id="369" source_obj="//@blocks.0/@node_objs.67" sink_obj="//@blocks.0/@node_objs.68"/>
+  <edges id="370" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.69"/>
+  <edges id="371" source_obj="//@blocks.0/@node_objs.59" sink_obj="//@blocks.0/@node_objs.69"/>
+  <edges id="372" source_obj="//@blocks.0/@node_objs.60" sink_obj="//@blocks.0/@node_objs.69"/>
+  <edges id="375" source_obj="//@blocks.0/@node_objs.69" sink_obj="//@blocks.0/@node_objs.70"/>
+  <edges id="376" source_obj="//@blocks.0/@node_objs.63" sink_obj="//@blocks.0/@node_objs.70"/>
+  <edges id="377" source_obj="//@blocks.0/@node_objs.70" sink_obj="//@blocks.0/@node_objs.71"/>
+  <edges id="378" sink_obj="//@blocks.0/@node_objs.72"/>
+  <edges id="380" source_obj="//@blocks.0/@node_objs.71" sink_obj="//@blocks.0/@node_objs.72"/>
+  <edges id="381" source_obj="//@blocks.0/@node_objs.72" sink_obj="//@blocks.0/@node_objs.73"/>
+  <edges id="384" source_obj="//@blocks.0/@node_objs.73" sink_obj="//@blocks.0/@node_objs.74"/>
+  <edges id="388" source_obj="//@blocks.0/@node_objs.58" sink_obj="//@blocks.0/@node_objs.75"/>
+  <edges id="389" sink_obj="//@blocks.0/@node_objs.76"/>
+  <edges id="391" source_obj="//@blocks.0/@node_objs.71" sink_obj="//@blocks.0/@node_objs.76"/>
+  <edges id="392" source_obj="//@blocks.0/@node_objs.76" sink_obj="//@blocks.0/@node_objs.77"/>
+  <edges id="393" source_obj="//@blocks.0/@node_objs.77" sink_obj="//@blocks.0/@node_objs.78"/>
+  <edges id="394" source_obj="//@blocks.0/@node_objs.78" sink_obj="//@blocks.0/@node_objs.79"/>
+  <edges id="395" source_obj="//@blocks.0/@node_objs.75" sink_obj="//@blocks.0/@node_objs.79"/>
+  <edges id="398" source_obj="//@blocks.0/@node_objs.79" sink_obj="//@blocks.0/@node_objs.80"/>
+  <edges id="402" sink_obj="//@blocks.0/@node_objs.81"/>
+  <edges id="404" source_obj="//@blocks.0/@node_objs.71" sink_obj="//@blocks.0/@node_objs.81"/>
+  <edges id="405" source_obj="//@blocks.0/@node_objs.81" sink_obj="//@blocks.0/@node_objs.82"/>
+  <edges id="406" source_obj="//@blocks.0/@node_objs.82" sink_obj="//@blocks.0/@node_objs.83"/>
+  <edges id="407" source_obj="//@blocks.0/@node_objs.68" sink_obj="//@blocks.0/@node_objs.84"/>
+  <edges id="408" source_obj="//@blocks.0/@node_objs.83" sink_obj="//@blocks.0/@node_objs.84"/>
+  <edges id="411" source_obj="//@blocks.0/@node_objs.84" sink_obj="//@blocks.0/@node_objs.85"/>
+  <edges id="415" source_obj="//@blocks.0/@node_objs.74" sink_obj="//@blocks.0/@node_objs.86"/>
+  <edges id="416" source_obj="//@blocks.0/@node_objs.80" sink_obj="//@blocks.0/@node_objs.87"/>
+  <edges id="417" source_obj="//@blocks.0/@node_objs.86" sink_obj="//@blocks.0/@node_objs.88"/>
+  <edges id="418" source_obj="//@blocks.0/@node_objs.87" sink_obj="//@blocks.0/@node_objs.88"/>
+  <edges id="419" source_obj="//@blocks.0/@node_objs.85" sink_obj="//@blocks.0/@node_objs.89"/>
+  <edges id="420" source_obj="//@blocks.0/@node_objs.88" sink_obj="//@blocks.0/@node_objs.90"/>
+  <edges id="421" source_obj="//@blocks.0/@node_objs.89" sink_obj="//@blocks.0/@node_objs.90"/>
+  <edges id="422" source_obj="//@blocks.0/@node_objs.90" sink_obj="//@blocks.0/@node_objs.91"/>
+  <edges id="423" source_obj="//@blocks.0/@node_objs.62" sink_obj="//@blocks.0/@node_objs.92"/>
+  <edges id="424" source_obj="//@blocks.0/@node_objs.91" sink_obj="//@blocks.0/@node_objs.93"/>
+  <edges id="425" source_obj="//@blocks.0/@node_objs.92" sink_obj="//@blocks.0/@node_objs.93"/>
+  <edges id="427" source_obj="//@blocks.0/@node_objs.93" sink_obj="//@blocks.0/@node_objs.94"/>
+  <edges id="432" source_obj="//@blocks.0/@node_objs.93" sink_obj="//@blocks.0/@node_objs.95"/>
+  <edges id="438" source_obj="//@blocks.0/@node_objs.95" sink_obj="//@blocks.0/@node_objs.96"/>
+  <edges id="443" source_obj="//@blocks.0/@node_objs.93" sink_obj="//@blocks.0/@node_objs.97"/>
+  <edges id="449" source_obj="//@blocks.0/@node_objs.97" sink_obj="//@blocks.0/@node_objs.98"/>
+  <edges id="454" source_obj="//@blocks.0/@node_objs.98" sink_obj="//@blocks.0/@node_objs.99"/>
+  <edges id="455" source_obj="//@blocks.0/@node_objs.96" sink_obj="//@blocks.0/@node_objs.99"/>
+  <edges id="456" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.99"/>
+  <edges id="457" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.99"/>
+  <edges id="458" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.100"/>
+  <edges id="459" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.101"/>
+  <edges id="460" source_obj="//@blocks.0/@node_objs.61" sink_obj="//@blocks.0/@node_objs.102"/>
+  <edges id="462" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.0/@node_objs.102"/>
+  <edges id="463" source_obj="//@blocks.0/@node_objs.102" sink_obj="//@blocks.0/@node_objs.103"/>
+  <edges id="466" source_obj="//@blocks.0/@node_objs.94" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="467" source_obj="//@blocks.0/@node_objs.101" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="468" source_obj="//@blocks.0/@node_objs.100" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="469" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="470" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="471" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="472" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="473" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.105"/>
+  <edges id="474" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.106"/>
+  <edges id="475" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.107"/>
+  <edges id="476" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.108"/>
+  <edges id="477" source_obj="//@blocks.0/@node_objs.104" sink_obj="//@blocks.0/@node_objs.109"/>
+  <edges id="478" source_obj="//@blocks.0/@node_objs.105" sink_obj="//@blocks.0/@node_objs.109"/>
+  <edges id="479" source_obj="//@blocks.0/@node_objs.107" sink_obj="//@blocks.0/@node_objs.109"/>
+  <edges id="480" source_obj="//@blocks.0/@node_objs.103" sink_obj="//@blocks.0/@node_objs.110"/>
+  <edges id="483" source_obj="//@blocks.0/@node_objs.110" sink_obj="//@blocks.0/@node_objs.111"/>
+  <edges id="484" source_obj="//@blocks.0/@node_objs.111" sink_obj="//@blocks.0/@node_objs.112"/>
+  <edges id="485" source_obj="//@blocks.0/@node_objs.109" sink_obj="//@blocks.0/@node_objs.112"/>
+  <edges id="487" source_obj="//@blocks.0/@node_objs.112" sink_obj="//@blocks.0/@node_objs.113"/>
+  <edges id="489" source_obj="//@blocks.0/@node_objs.94" sink_obj="//@blocks.0/@node_objs.114"/>
+  <edges id="492" source_obj="//@blocks.0/@node_objs.113" sink_obj="//@blocks.0/@node_objs.115"/>
+  <edges id="493" source_obj="//@blocks.0/@node_objs.114" sink_obj="//@blocks.0/@node_objs.115"/>
+  <edges id="496" source_obj="//@blocks.0/@node_objs.106" sink_obj="//@blocks.0/@node_objs.116"/>
+  <edges id="502" source_obj="//@blocks.0/@node_objs.108" sink_obj="//@blocks.0/@node_objs.117"/>
+  <edges id="505" source_obj="//@blocks.0/@node_objs.104" sink_obj="//@blocks.0/@node_objs.118"/>
+  <edges id="506" source_obj="//@blocks.0/@node_objs.116" sink_obj="//@blocks.0/@node_objs.118"/>
+  <edges id="507" source_obj="//@blocks.0/@node_objs.117" sink_obj="//@blocks.0/@node_objs.118"/>
+  <edges id="508" source_obj="//@blocks.0/@node_objs.112" sink_obj="//@blocks.0/@node_objs.119"/>
+  <edges id="511" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.120"/>
+  <edges id="512" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.120"/>
+  <edges id="531" source_obj="//@blocks.0/@node_objs.120" sink_obj="//@blocks.0/@node_objs.121"/>
+  <edges id="549" source_obj="//@blocks.0/@node_objs.120" sink_obj="//@blocks.0/@node_objs.122"/>
+  <edges id="550" source_obj="//@blocks.0/@node_objs.61" sink_obj="//@blocks.0/@node_objs.123"/>
+  <edges id="551" source_obj="//@blocks.0/@node_objs.121" sink_obj="//@blocks.0/@node_objs.123"/>
+  <edges id="552" source_obj="//@blocks.0/@node_objs.122" sink_obj="//@blocks.0/@node_objs.123"/>
+  <edges id="553" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.124"/>
+  <edges id="555" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.125"/>
+  <edges id="558" source_obj="//@blocks.0/@node_objs.124" sink_obj="//@blocks.0/@node_objs.126"/>
+  <edges id="559" source_obj="//@blocks.0/@node_objs.125" sink_obj="//@blocks.0/@node_objs.126"/>
+  <edges id="560" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.127"/>
+  <edges id="562" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.128"/>
+  <edges id="563" source_obj="//@blocks.0/@node_objs.127" sink_obj="//@blocks.0/@node_objs.128"/>
+  <edges id="564" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.129"/>
+  <edges id="568" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.130"/>
+  <edges id="571" source_obj="//@blocks.0/@node_objs.130" sink_obj="//@blocks.0/@node_objs.131"/>
+  <edges id="573" source_obj="//@blocks.0/@node_objs.123" sink_obj="//@blocks.0/@node_objs.132"/>
+  <edges id="574" source_obj="//@blocks.0/@node_objs.131" sink_obj="//@blocks.0/@node_objs.132"/>
+  <edges id="575" source_obj="//@blocks.0/@node_objs.130" sink_obj="//@blocks.0/@node_objs.133"/>
+  <edges id="578" source_obj="//@blocks.0/@node_objs.130" sink_obj="//@blocks.0/@node_objs.134"/>
+  <edges id="579" source_obj="//@blocks.0/@node_objs.115" sink_obj="//@blocks.0/@node_objs.134"/>
+  <edges id="580" source_obj="//@blocks.0/@node_objs.134" sink_obj="//@blocks.0/@node_objs.135"/>
+  <edges id="581" source_obj="//@blocks.0/@node_objs.133" sink_obj="//@blocks.0/@node_objs.135"/>
+  <edges id="582" source_obj="//@blocks.0/@node_objs.119" sink_obj="//@blocks.0/@node_objs.135"/>
+  <edges id="583" source_obj="//@blocks.0/@node_objs.126" sink_obj="//@blocks.0/@node_objs.136"/>
+  <edges id="584" source_obj="//@blocks.0/@node_objs.128" sink_obj="//@blocks.0/@node_objs.136"/>
+  <edges id="585" source_obj="//@blocks.0/@node_objs.132" sink_obj="//@blocks.0/@node_objs.136"/>
+  <edges id="586" source_obj="//@blocks.0/@node_objs.126" sink_obj="//@blocks.0/@node_objs.137"/>
+  <edges id="587" source_obj="//@blocks.0/@node_objs.129" sink_obj="//@blocks.0/@node_objs.137"/>
+  <edges id="588" source_obj="//@blocks.0/@node_objs.135" sink_obj="//@blocks.0/@node_objs.137"/>
+  <edges id="589" source_obj="//@blocks.0/@node_objs.124" sink_obj="//@blocks.0/@node_objs.138"/>
+  <edges id="590" source_obj="//@blocks.0/@node_objs.125" sink_obj="//@blocks.0/@node_objs.138"/>
+  <edges id="591" source_obj="//@blocks.0/@node_objs.138" sink_obj="//@blocks.0/@node_objs.139"/>
+  <edges id="593" source_obj="//@blocks.0/@node_objs.139" sink_obj="//@blocks.0/@node_objs.140"/>
+  <edges id="597" source_obj="//@blocks.0/@node_objs.126" sink_obj="//@blocks.0/@node_objs.141"/>
+  <edges id="598" source_obj="//@blocks.0/@node_objs.130" sink_obj="//@blocks.0/@node_objs.141"/>
+  <edges id="599" source_obj="//@blocks.0/@node_objs.115" sink_obj="//@blocks.0/@node_objs.142"/>
+  <edges id="601" source_obj="//@blocks.0/@node_objs.118" sink_obj="//@blocks.0/@node_objs.142"/>
+  <edges id="602" source_obj="//@blocks.0/@node_objs.141" sink_obj="//@blocks.0/@node_objs.143"/>
+  <edges id="603" source_obj="//@blocks.0/@node_objs.140" sink_obj="//@blocks.0/@node_objs.143"/>
+  <edges id="604" source_obj="//@blocks.0/@node_objs.142" sink_obj="//@blocks.0/@node_objs.143"/>
+  <edges id="607" source_obj="//@blocks.0/@node_objs.136" sink_obj="//@blocks.0/@node_objs.144"/>
+  <edges id="608" source_obj="//@blocks.0/@node_objs.137" sink_obj="//@blocks.0/@node_objs.144"/>
+  <edges id="609" source_obj="//@blocks.0/@node_objs.143" sink_obj="//@blocks.0/@node_objs.144"/>
+  <edges id="610" source_obj="//@blocks.0/@node_objs.144" sink_obj="//@blocks.0/@node_objs.145"/>
+  <edges id="611" source_obj="//@blocks.0/@node_objs.145" sink_obj="//@blocks.0/@node_objs.146"/>
+  <edges id="636" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.104" sink_obj="//@blocks.0/@node_objs.105"/>
+  <edges id="637" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.104" sink_obj="//@blocks.0/@node_objs.106"/>
+  <edges id="638" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.104" sink_obj="//@blocks.0/@node_objs.107"/>
+  <edges id="639" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.104" sink_obj="//@blocks.0/@node_objs.108"/>
+  <edges id="640" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.99" sink_obj="//@blocks.0/@node_objs.100"/>
+  <edges id="641" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.99" sink_obj="//@blocks.0/@node_objs.101"/>
+  <edges source_obj="//@blocks.0/@node_objs.146" sink_obj="//@ports.2"/>
+  <blocks id="158" name="sin_or_cos&lt;float>" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="do_cos_read" coreId="539767347" bitwidth="1" opcode="read" nodeLabel="11.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <dataInputObjs>do_cos</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="t_in_read" coreId="741417004" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>t_in</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="trunc_ln10_loc" coreId="1685024095" bitwidth="28" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="shift_1_loc" coreId="1768713801" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="in_shift_V_1_cast_loc" coreId="925704236" bitwidth="28" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="shift_loc" coreId="741681509" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="c_1_022_loc" coreId="2020173429" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="c_0_023_loc" coreId="1869438831" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="data_V" lineNumber="317" originalName="data.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="data_V_fu_287_p1" coreId="690386035" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_utils.h" linenumber="317" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="fp_struct"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="p_Result_58" lineNumber="779" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_58_reg_1193" coreId="1970435104" contextFuncName="operator_bool" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="779" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator bool"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="din_exp_V" lineNumber="628" originalName="din.exp.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="din_exp_V_reg_1199" coreId="1869438831" contextFuncName="get" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="628" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="din_sig_V" lineNumber="628" originalName="din.sig.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="din_sig_V_fu_309_p1" coreId="741552690" contextFuncName="get" bitwidth="23" opcode="trunc" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="628" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="closepath" lineNumber="1027" originalName="closepath" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="closepath_fu_313_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.55" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1027" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="Ex_V" lineNumber="214" originalName="Ex.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Ex_V_fu_499_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ap_int_base" bitwidth="8" opcode="add" nodeLabel="8.0" m_display="0" m_delay="1.91" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="214" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="ap_int_base"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="select_ln482" lineNumber="482" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln482_fu_504_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="range_redux_payne_hanek_hotbm_29_float_29_29_s" bitwidth="8" opcode="select" nodeLabel="8.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" linenumber="482" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="range_redux_payne_hanek_hotbm&amp;lt;29, float, 29, 29&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_Result_59" lineNumber="628" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_59_fu_319_p1" coreId="544175214" contextFuncName="get" bitwidth="23" opcode="trunc" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="628" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="p_Result_60" lineNumber="1494" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_60_fu_381_p3" coreId="712270191" contextFuncName="operator_mul_80_false_24_false" bitwidth="24" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1494" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;80, false, 24, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="add_ln214" lineNumber="214" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="add_ln214_fu_323_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ap_int_base" bitwidth="8" opcode="add" m_display="0" m_delay="1.91" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="214" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="ap_int_base"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="addr_V" lineNumber="214" originalName="addr.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="addr_V_fu_329_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="ap_int_base" bitwidth="8" opcode="select" m_display="0" m_delay="1.24" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="214" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="ap_int_base"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="lshr_ln" lineNumber="1669" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="lshr_ln_fu_337_p4" coreId="1869438833" contextFuncName="operator_rs_9_true" bitwidth="4" opcode="partselect" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1669" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;gt;&amp;gt;&amp;lt;9, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln541_1" lineNumber="541" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln541_1_fu_347_p1" coreId="544175214" contextFuncName="operator_long_long" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="541" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator long long"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="ref_4oPi_table_100_V_addr" lineNumber="407" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1685024095" contextFuncName="table_lookup_4oPi_hotbm_23_29_s" bitwidth="4" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" linenumber="407" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="table_lookup_4oPi_hotbm&amp;lt;23, 29&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="table_100_V" lineNumber="407" originalName="table_100.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreName="ROM_1P_LUTRAM" implIndex="lutram" control="no" opType="rom_1p" coreId="97" contextFuncName="table_lookup_4oPi_hotbm_23_29_s" bitwidth="100" opcode="load" nodeLatency="1" m_display="0" m_delay="2.3" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" linenumber="407" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="table_lookup_4oPi_hotbm&amp;lt;23, 29&amp;gt;"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="trunc_ln628" lineNumber="628" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="trunc_ln628_fu_352_p1" coreId="757083193" contextFuncName="get" bitwidth="4" opcode="trunc" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="628" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln930" lineNumber="930" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln930_fu_362_p1" coreId="1601265520" contextFuncName="operator_ls_4" bitwidth="100" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="930" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;&amp;lt;4&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="r_V_38" lineNumber="930" originalName="r.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="r_V_38_fu_365_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_ls_4" bitwidth="100" opcode="shl" nodeLabel="1.0" m_display="0" m_delay="4.77" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="930" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;&amp;lt;4&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="Med_V" lineNumber="628" originalName="Med.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Med_V_reg_1234" coreId="1834971487" contextFuncName="get" bitwidth="80" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="628" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="zext_ln1494" lineNumber="1494" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="grp_fu_392_p10" coreId="539767858" contextFuncName="operator_mul_80_false_24_false" bitwidth="80" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1494" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;80, false, 24, false&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="ret_V" lineNumber="1494" originalName="ret.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mul_80s_24ns_80_5_1_U12" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_80_false_24_false" bitwidth="80" opcode="mul" nodeLabel="2.0" nodeLatency="4" m_display="0" m_delay="6.97" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1494" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;80, false, 24, false&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="Mx_bits_V" lineNumber="818" originalName="Mx_bits.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Mx_bits_V_reg_1249" coreId="1920213036" contextFuncName="operator_assign_104_27_false_AP_TRN_AP_WRAP_0" bitwidth="58" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;104, 27, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="k_V" lineNumber="353" originalName="k.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="k_V_reg_1255" coreId="892411948" contextFuncName="ap_int_base_104_27_false_AP_TRN_AP_WRAP_0_s" bitwidth="3" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="353" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="ap_int_base&amp;lt;104, 27, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp" lineNumber="259" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="tmp_fu_417_p3" coreId="741357628" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="bitselect" nodeLabel="7.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="259" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="k_V_1" lineNumber="1027" originalName="k.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="k_V_1_fu_511_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_lt_32_true" bitwidth="3" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.98" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1027" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="xor_ln1027" lineNumber="1027" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="xor_ln1027_fu_424_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="xor" nodeLabel="7.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1027" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="p_Result_s" lineNumber="1027" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_s_fu_429_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="and" nodeLabel="7.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1027" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="Mx_bits_V_1" lineNumber="813" originalName="Mx_bits.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Mx_bits_V_1_fu_435_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_assign_91_33_true_AP_TRN_AP_WRAP_0" bitwidth="58" opcode="sub" nodeLabel="7.0" m_display="0" m_delay="3.36" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="813" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;91, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="Mx_bits_V_3" lineNumber="520" originalName="Mx_bits.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Mx_bits_V_3_fu_440_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="range_redux_payne_hanek_hotbm_29_float_29_29_s" bitwidth="58" opcode="select" nodeLabel="7.0" m_display="0" m_delay="1.07" m_topoIndex="34" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h" linenumber="520" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="range_redux_payne_hanek_hotbm&amp;lt;29, float, 29, 29&amp;gt;"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_11" lineNumber="594" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="tmp_11_fu_447_p4" coreId="1113542744" contextFuncName="get" bitwidth="29" opcode="partselect" nodeLabel="7.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" linenumber="594" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="p_Result_61" lineNumber="804" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_61_fu_457_p3" coreId="1920213036" contextFuncName="operator_assign" bitwidth="30" opcode="bitconcatenate" nodeLabel="7.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="804" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="p_Result_49" lineNumber="1197" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_49_fu_465_p4" coreId="892416316" contextFuncName="countLeadingZeros" bitwidth="30" opcode="partselect" nodeLabel="7.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1197" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="countLeadingZeros"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="p_Result_62" lineNumber="1198" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_62_fu_475_p3" coreId="741810220" contextFuncName="countLeadingZeros" bitwidth="31" opcode="bitconcatenate" nodeLabel="7.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1198" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="countLeadingZeros"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln1198" lineNumber="1198" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln1198_fu_483_p1" coreId="641618772" contextFuncName="countLeadingZeros" bitwidth="32" opcode="sext" nodeLabel="7.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1198" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="countLeadingZeros"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>cttz</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="op_assign" lineNumber="1199" originalName="op" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="op_assign_fu_487_p3" coreId="925966380" contextFuncName="countLeadingZeros" bitwidth="32" opcode="cttz" nodeLabel="7.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1199" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="countLeadingZeros"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="Mx_zeros" lineNumber="215" originalName="Mx_zeros" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Mx_zeros_fu_495_p1" coreId="977167724" contextFuncName="ap_int_base" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="215" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="ap_int_base"/>
+      <dataInputObjs>cttz</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="zext_ln841" lineNumber="841" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln841_fu_517_p1" coreId="1920213036" contextFuncName="operator_sub_assign_6_false" bitwidth="8" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="841" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator-=&amp;lt;6, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="zext_ln1454" lineNumber="1454" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln1454_fu_520_p1" coreId="1920213036" contextFuncName="operator_ls" bitwidth="58" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1454" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="r" lineNumber="1454" originalName="r" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="r_fu_523_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_ls" bitwidth="58" opcode="shl" nodeLabel="8.0" m_display="0" m_delay="4.6" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1454" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="Mx_V" lineNumber="818" originalName="Mx.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Mx_V_reg_1277" coreId="858988588" contextFuncName="operator_assign_58_0_false_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;58, 0, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="Ex_V_3" lineNumber="841" originalName="Ex.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Ex_V_3_fu_538_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_sub_assign_6_false" bitwidth="8" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="1.91" m_topoIndex="49" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="841" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator-=&amp;lt;6, false&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="sext_ln1535" lineNumber="1535" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln1535_fu_544_p1" coreId="741357628" contextFuncName="operator_ls_8" bitwidth="9" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1535" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;&amp;lt;8&amp;gt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="isNeg" lineNumber="1511" originalName="isNeg" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="isNeg_reg_1288" coreId="741880892" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1511" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="sub_ln1512" lineNumber="1512" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sub_ln1512_fu_556_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_ls" bitwidth="9" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="1.91" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1512" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="ush" lineNumber="1512" originalName="ush" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="ush_fu_562_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ls" bitwidth="9" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.96" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1512" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="sext_ln1512" lineNumber="1512" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln1512_fu_580_p1" coreId="825499692" contextFuncName="operator_ls" bitwidth="32" opcode="sext" nodeLabel="9.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1512" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="zext_ln1488" lineNumber="1488" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln1488_fu_583_p1" coreId="741423164" contextFuncName="operator_rs" bitwidth="32" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1488" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="lshr_ln1488" lineNumber="1488" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="lshr_ln1488_fu_586_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="operator_rs" bitwidth="32" opcode="lshr" nodeLabel="9.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1488" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="shl_ln1454" lineNumber="1454" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="shl_ln1454_fu_592_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_ls" bitwidth="32" opcode="shl" nodeLabel="9.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1454" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="select_ln1513" lineNumber="1513" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln1513_fu_598_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ls" bitwidth="32" opcode="select" nodeLabel="9.0" m_display="0" m_delay="4.33" m_topoIndex="60" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1513" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>lshr</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="B" lineNumber="813" originalName="B" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="B_fu_605_p1" coreId="1634082860" contextFuncName="operator_assign_29_0_false_AP_TRN_AP_WRAP_0" bitwidth="22" opcode="trunc" nodeLabel="9.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="813" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;29, 0, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="tmp_s" lineNumber="271" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mux_83_1_1_1_U13" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="mux" nodeLabel="11.0" m_display="0" m_delay="2.3" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="271" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="xor_ln271" lineNumber="271" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="xor_ln271_fu_654_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="xor" nodeLabel="11.0" m_display="0" m_delay="0.97" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="271" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="cos_basis" lineNumber="271" originalName="cos_basis" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="cos_basis_fu_660_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="select" nodeLabel="11.0" m_display="0" m_delay="0.99" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="271" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="Mx_V_1" lineNumber="272" originalName="Mx.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Mx_V_1_fu_861_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="29" opcode="select" nodeLabel="15.0" m_display="0" m_delay="0.8" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="272" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_12" lineNumber="594" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="tmp_12_reg_1317" coreId="1601134448" contextFuncName="get" bitwidth="7" opcode="partselect" nodeLabel="9.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" linenumber="594" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="B_trunc" lineNumber="818" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="B_trunc_fu_619_p4" coreId="1630019628" contextFuncName="operator_assign_22_7_false_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="partselect" nodeLabel="9.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;22, -7, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="zext_ln1271" lineNumber="1271" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln1271_fu_629_p1" coreId="1600415096" contextFuncName="operator_mul_15_7_false_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="zext" nodeLabel="9.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1271" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;15, -7, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="r_V" lineNumber="1273" originalName="r.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mul_mul_15ns_15ns_30_4_1_U18" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_mul_15_7_false_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="mul" nodeLabel="9.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;15, -7, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="B_squared" lineNumber="818" originalName="B_squared" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="B_squared_fu_791_p4" coreId="741681509" contextFuncName="operator_assign_30_14_false_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="partselect" nodeLabel="12.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;30, -14, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="zext_ln818" lineNumber="818" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="grp_fu_1150_p00" coreId="1768316784" contextFuncName="operator_assign_30_14_false_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;30, -14, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="sin_basis" lineNumber="25" originalName="sin_basis" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sin_basis_fu_668_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_approximation_29_29_s" bitwidth="1" opcode="select" nodeLabel="11.0" m_display="0" m_delay="0.99" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp" linenumber="25" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos_approximation&amp;lt;29, 29&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="p_Result_63" lineNumber="798" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_63_fu_676_p3" coreId="694510703" contextFuncName="operator_assign" bitwidth="8" opcode="bitconcatenate" nodeLabel="11.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="798" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator="/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="zext_ln541" lineNumber="541" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="zext_ln541_fu_683_p1" coreId="1953721967" contextFuncName="operator_unsigned_long_long" bitwidth="64" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="541" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator unsigned long long"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="second_order_float_sin_cos_K0_V_addr" lineNumber="818" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1936618784" contextFuncName="operator_assign_30_1_false_AP_TRN_AP_WRAP_0" bitwidth="8" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;30, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="second_order_float_sin_cos_K0_V_load" lineNumber="818" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreName="ROM_1P_LUTRAM" implIndex="lutram" control="no" opType="rom_1p" coreId="97" contextFuncName="operator_assign_30_1_false_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;30, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="t1_V" lineNumber="818" originalName="t1.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="t1_V_reg_1365" coreId="2035569210" contextFuncName="operator_assign_30_1_false_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="partselect" nodeLabel="12.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;30, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="zext_ln1271_1" lineNumber="1271" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="r_V_33_fu_845_p10" coreId="1919250543" contextFuncName="operator_mul_23_1_true_AP_TRN_AP_WRAP_0" bitwidth="45" opcode="zext" nodeLabel="13.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1271" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;23, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="second_order_float_sin_cos_K1_V_addr" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1713913401" contextFuncName="operator_mul_23_1_true_AP_TRN_AP_WRAP_0" bitwidth="8" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;23, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="second_order_float_sin_cos_K1_V_load" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreName="ROM_1P_LUTRAM" implIndex="lutram" control="no" opType="rom_1p" coreId="97" contextFuncName="operator_mul_23_1_true_AP_TRN_AP_WRAP_0" bitwidth="23" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;23, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="sext_ln1273" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="891905380" contextFuncName="operator_mul_23_1_true_AP_TRN_AP_WRAP_0" bitwidth="45" opcode="sext" nodeLabel="13.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;23, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="r_V_33" lineNumber="1273" originalName="r.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mul_23s_22ns_45_1_1_U16" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_23_1_true_AP_TRN_AP_WRAP_0" bitwidth="45" opcode="mul" nodeLabel="13.0" m_display="0" m_delay="6.43" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;23, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="rhs_16" lineNumber="818" originalName="rhs" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="rhs_16_reg_1391" coreId="694510703" contextFuncName="operator_assign_45_6_true_AP_TRN_AP_WRAP_0" bitwidth="22" opcode="partselect" nodeLabel="13.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;45, -6, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="second_order_float_sin_cos_K2_V_addr" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1601265520" contextFuncName="operator_mul_15_0_true_AP_TRN_AP_WRAP_0" bitwidth="8" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;15, 0, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="second_order_float_sin_cos_K2_V_load" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreName="ROM_1P_LUTRAM" implIndex="lutram" control="no" opType="rom_1p" coreId="97" contextFuncName="operator_mul_15_0_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;15, 0, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="sext_ln1273_3" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1885415200" contextFuncName="operator_mul_15_0_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;15, 0, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="r_V_35" lineNumber="1273" originalName="r.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mul_mul_15ns_15s_30_4_1_U19" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_mul_15_0_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="mul" nodeLabel="12.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;15, 0, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="rhs_1" lineNumber="818" originalName="rhs" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="rhs_1_fu_867_p4" coreId="1629954158" contextFuncName="operator_assign_30_14_true_AP_TRN_AP_WRAP_0" bitwidth="14" opcode="partselect" nodeLabel="15.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;30, -14, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="sext_ln813" lineNumber="813" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln813_fu_876_p1" coreId="1852383271" contextFuncName="operator_assign_29_1_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="sext" nodeLabel="15.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="813" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;29, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="sext_ln813_7" lineNumber="813" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln813_7_fu_879_p1" coreId="876034615" contextFuncName="operator_assign_29_1_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="sext" nodeLabel="15.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="813" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;29, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="ret_V_33" lineNumber="1347" originalName="ret.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="ret_V_33_fu_882_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_add_29_1_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="add" nodeLabel="15.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1347" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator+&amp;lt;29, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="sext_ln1347" lineNumber="1347" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln1347_fu_888_p1" coreId="539437428" contextFuncName="operator_add_29_1_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="sext" nodeLabel="15.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1347" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator+&amp;lt;29, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="ret_V_34" lineNumber="1347" originalName="ret.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="ret_V_34_fu_892_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_add_29_1_true_AP_TRN_AP_WRAP_0" bitwidth="30" opcode="add" nodeLabel="15.0" m_display="0" m_delay="4.31" m_topoIndex="104" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1347" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator+&amp;lt;29, 1, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sext_ln1270" lineNumber="1270" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1852383271" contextFuncName="operator_mul_29_0_false_AP_TRN_AP_WRAP_0" bitwidth="58" opcode="sext" nodeLabel="16.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1270" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;29, 0, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="zext_ln1273" lineNumber="1273" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="grp_fu_904_p10" coreId="1600415077" contextFuncName="operator_mul_29_0_false_AP_TRN_AP_WRAP_0" bitwidth="58" opcode="zext" nodeLabel="16.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;29, 0, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="r_V_37" lineNumber="1273" originalName="r.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mul_30s_29ns_58_2_1_U17" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_29_0_false_AP_TRN_AP_WRAP_0" bitwidth="58" opcode="mul" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="6.91" m_topoIndex="107" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1273" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator*&amp;lt;29, 0, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="result_V" lineNumber="818" originalName="result.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="result_V_reg_1416" coreId="741356604" contextFuncName="operator_assign_60_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="partselect" nodeLabel="17.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;60, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="tmp_13" lineNumber="594" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="tmp_13_reg_1422" coreId="909390138" contextFuncName="get" bitwidth="16" opcode="partselect" nodeLabel="17.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" linenumber="594" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="p_Result_64" lineNumber="804" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_64_fu_940_p3" coreId="1869438831" contextFuncName="operator_assign" bitwidth="32" opcode="bitconcatenate" nodeLabel="18.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="804" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="tmp_14" lineNumber="594" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="tmp_14_reg_1427" coreId="1768713801" contextFuncName="get" bitwidth="13" opcode="partselect" nodeLabel="17.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h" linenumber="594" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="get"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="p_Result_65" lineNumber="804" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_65_fu_948_p3" coreId="1852383271" contextFuncName="operator_assign" bitwidth="32" opcode="bitconcatenate" nodeLabel="18.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="804" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln804" lineNumber="804" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="grp_sin_or_cos_float_Pipeline_1_fu_268" coreId="744846706" contextFuncName="operator_assign" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_delay="1.39" m_topoIndex="113" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="804" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator="/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>sin_or_cos_float_Pipeline_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="c_0_023_loc_load" coreId="924855344" bitwidth="32" opcode="load" nodeLabel="20.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="c_1_022_loc_load" coreId="539377200" bitwidth="32" opcode="load" nodeLabel="20.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="Ex_V_4" lineNumber="272" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="Ex_V_4_fu_969_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="8" opcode="select" nodeLabel="22.0" m_display="0" m_topoIndex="118" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="272" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="sext_ln186" lineNumber="186" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln186_fu_975_p1" coreId="1650418789" contextFuncName="ap_int_base_8_true_s" bitwidth="9" opcode="sext" nodeLabel="22.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="186" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="ap_int_base&amp;lt;8, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="targetBlock" lineNumber="818" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="grp_sin_or_cos_float_Pipeline_2_fu_276" coreId="539437428" contextFuncName="operator_assign_60_3_true_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="call" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="4.75" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="818" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;60, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>sin_or_cos_float_Pipeline_2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="shift_loc_load" coreId="1650418789" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="in_shift_V_1_cast_loc_load" coreId="1835888483" bitwidth="28" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="121" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="shift_1_loc_load" coreId="1701080941" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="122" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="trunc_ln10_loc_load" coreId="1869438831" bitwidth="28" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="select_ln318" lineNumber="318" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln318_fu_991_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="select" nodeLabel="22.0" m_display="0" m_topoIndex="124" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="318" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="add_ln329" lineNumber="329" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="add_ln329_fu_998_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="9" opcode="add" nodeLabel="22.0" m_display="0" m_delay="1.91" m_topoIndex="125" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="329" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="sext_ln329" lineNumber="329" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="sext_ln329_fu_1004_p1" coreId="673197157" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="sext" nodeLabel="22.0" m_display="0" m_topoIndex="126" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="329" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="newexp" lineNumber="329" originalName="newexp" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="newexp_fu_1008_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="32" opcode="sub" nodeLabel="22.0" m_display="0" m_delay="2.55" m_topoIndex="127" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="329" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="tmp_42" lineNumber="335" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="tmp_42_fu_1014_p3" coreId="673197157" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="1" opcode="bitselect" nodeLabel="22.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="335" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="icmp_ln1653" lineNumber="1653" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="icmp_ln1653_fu_964_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_32_true_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="icmp" nodeLabel="20.0" m_display="0" m_delay="2.46" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h" linenumber="1653" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator==&amp;lt;32, 32, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="or_ln335" lineNumber="335" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="or_ln335_fu_1022_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="1" opcode="or" nodeLabel="22.0" m_display="0" m_delay="0.97" m_topoIndex="129" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="335" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="tmp_43" rtlName="tmp_43_fu_1027_p4" coreId="673197109" bitwidth="23" opcode="partselect" nodeLabel="22.0" m_display="0" m_topoIndex="130" m_clusterGroupNumber="6">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="tmp_44" rtlName="tmp_44_fu_1037_p4" coreId="1918986339" bitwidth="23" opcode="partselect" nodeLabel="22.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="6">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="select_ln318_1" lineNumber="318" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln318_1_fu_1047_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="23" opcode="select" nodeLabel="22.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="318" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="empty" lineNumber="329" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="empty_fu_1054_p1" coreId="741550437" contextFuncName="scaled_fixed2ieee_29_1_s" bitwidth="8" opcode="trunc" nodeLabel="22.0" m_display="0" m_topoIndex="133" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h" linenumber="329" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="scaled_fixed2ieee&amp;lt;29, 1&amp;gt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="p_Result_66" lineNumber="809" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_66_fu_690_p3" coreId="1868767294" contextFuncName="operator_assign" bitwidth="4" opcode="bitconcatenate" nodeLabel="11.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="809" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator="/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="tmp_15" lineNumber="296" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mux_164_1_1_1_U14" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="mux" nodeLabel="11.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="296" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="tmp_16" lineNumber="296" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="mux_164_1_1_1_U15" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="mux" nodeLabel="11.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="296" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="results_sign_V" lineNumber="271" originalName="results.sign.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_sign_V_fu_772_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="select" nodeLabel="11.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="271" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="icmp_ln1019" lineNumber="1019" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="icmp_ln1019_fu_570_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.55" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1019" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="icmp_ln1019_1" lineNumber="1019" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="icmp_ln1019_1_fu_356_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.44" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1019" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="and_ln300" lineNumber="300" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="and_ln300_fu_818_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_delay="0.97" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="xor_ln307" lineNumber="307" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="xor_ln307_fu_822_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="xor" nodeLabel="12.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="307" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="results_sign_V_2" lineNumber="307" originalName="results.sign.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_sign_V_2_fu_827_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="307" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="select_ln288" lineNumber="288" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln288_fu_1058_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="8" opcode="select" nodeLabel="22.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="288" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="icmp_ln1019_2" lineNumber="1019" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="icmp_ln1019_2_fu_575_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq_32_true" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.55" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h" linenumber="1019" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator==&amp;lt;32, true&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="xor_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="xor_ln311_fu_780_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="xor" nodeLabel="11.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="results_sign_V_3" lineNumber="311" originalName="results.sign.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_sign_V_3_fu_785_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="and" nodeLabel="11.0" m_display="0" m_delay="2.06" m_topoIndex="84" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="select_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln311_fu_1065_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="8" opcode="select" nodeLabel="22.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="or_ln311" lineNumber="311" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="or_ln311_fu_1072_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="or" nodeLabel="22.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="results_exp_V_1" lineNumber="311" originalName="results.exp.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_exp_V_1_fu_1077_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="8" opcode="select" nodeLabel="22.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="311" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="147" name="results_sign_V_4" lineNumber="300" originalName="results.sign.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_sign_V_4_fu_832_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="select" nodeLabel="12.0" m_display="0" m_delay="0.99" m_topoIndex="93" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="results_exp_V" lineNumber="300" originalName="results.exp.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_exp_V_fu_1085_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="8" opcode="select" nodeLabel="22.0" m_display="0" m_delay="1.24" m_topoIndex="138" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="and_ln300_1" lineNumber="300" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="and_ln300_1_fu_1092_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="and" nodeLabel="22.0" m_display="0" m_topoIndex="139" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="xor_ln300" lineNumber="300" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="xor_ln300_fu_1096_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="xor" nodeLabel="22.0" m_display="0" m_topoIndex="140" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="select_ln300_3" lineNumber="300" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln300_3_fu_1102_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="23" opcode="select" nodeLabel="22.0" m_display="0" m_delay="0.99" m_topoIndex="141" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="or_ln300" lineNumber="300" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="or_ln300_fu_1110_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="sin_or_cos_float_s" bitwidth="1" opcode="or" nodeLabel="22.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="11">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="153" name="select_ln300" lineNumber="300" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="select_ln300_fu_1114_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="23" opcode="select" nodeLabel="22.0" m_display="0" m_delay="0.69" m_topoIndex="143" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="results_sig_V" lineNumber="300" originalName="results.sig.V" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="results_sig_V_fu_1122_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sin_or_cos_float_s" bitwidth="23" opcode="select" nodeLabel="22.0" m_display="0" m_delay="0.97" m_topoIndex="144" m_clusterGroupNumber="11">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="300" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="p_Result_67" lineNumber="368" originalName="__Result__" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="p_Result_67_fu_1130_p4" coreId="1885415456" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="bitconcatenate" nodeLabel="22.0" m_display="0" m_topoIndex="145" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h" linenumber="368" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="operator=&amp;lt;23, false&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="bitcast_ln356" lineNumber="356" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_utils.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" rtlName="ap_return" coreId="842019420" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="22.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_utils.h" linenumber="356" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="to_float"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="_ln316" lineNumber="316" fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" fileDirectory="C:/scratch/2022.2.2/hls_product/139/2022.2.2/src/shared/hls/clib/hlsmath" coreId="1869770847" contextFuncName="sin_or_cos_float_s" opcode="ret" nodeLabel="22.0" m_display="0" m_topoIndex="147" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h" linenumber="316" fileDirectory="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath" functionName="sin_or_cos&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h">
+      <validLinenumbers>1027</validLinenumbers>
+      <validLinenumbers>214</validLinenumbers>
+      <validLinenumbers>1494</validLinenumbers>
+      <validLinenumbers>1669</validLinenumbers>
+      <validLinenumbers>541</validLinenumbers>
+      <validLinenumbers>930</validLinenumbers>
+      <validLinenumbers>353</validLinenumbers>
+      <validLinenumbers>1197</validLinenumbers>
+      <validLinenumbers>1198</validLinenumbers>
+      <validLinenumbers>1199</validLinenumbers>
+      <validLinenumbers>215</validLinenumbers>
+      <validLinenumbers>841</validLinenumbers>
+      <validLinenumbers>186</validLinenumbers>
+      <validLinenumbers>1019</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_ref.h">
+      <validLinenumbers>594</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_ref.h">
+      <validLinenumbers>779</validLinenumbers>
+      <validLinenumbers>628</validLinenumbers>
+      <validLinenumbers>804</validLinenumbers>
+      <validLinenumbers>798</validLinenumbers>
+      <validLinenumbers>809</validLinenumbers>
+      <validLinenumbers>368</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_hotbm.h">
+      <validLinenumbers>259</validLinenumbers>
+      <validLinenumbers>271</validLinenumbers>
+      <validLinenumbers>272</validLinenumbers>
+      <validLinenumbers>296</validLinenumbers>
+      <validLinenumbers>300</validLinenumbers>
+      <validLinenumbers>307</validLinenumbers>
+      <validLinenumbers>288</validLinenumbers>
+      <validLinenumbers>311</validLinenumbers>
+      <validLinenumbers>316</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/hlsmath/include/FloatingPoint/hls_range_redux.h">
+      <validLinenumbers>482</validLinenumbers>
+      <validLinenumbers>407</validLinenumbers>
+      <validLinenumbers>520</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_utils.h">
+      <validLinenumbers>317</validLinenumbers>
+      <validLinenumbers>356</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib\hlsmath\src\common\hls_hotbm_float.cpp">
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/src/hls\utils/x_hls_float_utils.h">
+      <validLinenumbers>318</validLinenumbers>
+      <validLinenumbers>329</validLinenumbers>
+      <validLinenumbers>335</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_fixed_base.h">
+      <validLinenumbers>818</validLinenumbers>
+      <validLinenumbers>813</validLinenumbers>
+      <validLinenumbers>1454</validLinenumbers>
+      <validLinenumbers>1535</validLinenumbers>
+      <validLinenumbers>1511</validLinenumbers>
+      <validLinenumbers>1512</validLinenumbers>
+      <validLinenumbers>1488</validLinenumbers>
+      <validLinenumbers>1513</validLinenumbers>
+      <validLinenumbers>1271</validLinenumbers>
+      <validLinenumbers>1273</validLinenumbers>
+      <validLinenumbers>1347</validLinenumbers>
+      <validLinenumbers>1270</validLinenumbers>
+      <validLinenumbers>1653</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <regnodes realName="ush_reg_1293">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="shift_loc_reg_1175">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_12_reg_1317">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="Mx_V_reg_1277">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="closepath_reg_1206">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_14_reg_1427">
+    <nodeIds>108</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Result_59_reg_1213">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="ref_4oPi_table_100_V_addr_reg_1218">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="Mx_V_1_reg_1396">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1019_1_reg_1228">
+    <nodeIds>136</nodeIds>
+  </regnodes>
+  <regnodes realName="isNeg_reg_1288">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln10_loc_reg_1157">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="c_1_022_loc_reg_1181">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln628_reg_1223">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="Med_V_reg_1234">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1019_2_reg_1304">
+    <nodeIds>141</nodeIds>
+  </regnodes>
+  <regnodes realName="second_order_float_sin_cos_K2_V_addr_reg_1350">
+    <nodeIds>92</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln1273_reg_1411">
+    <nodeIds>103</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln1271_reg_1322">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="din_exp_V_reg_1199">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="results_sign_V_4_reg_1386">
+    <nodeIds>147</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_V_34_reg_1401">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln300_reg_1380">
+    <nodeIds>137</nodeIds>
+  </regnodes>
+  <regnodes realName="k_V_1_reg_1271">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Result_64_reg_1432">
+    <nodeIds>107</nodeIds>
+  </regnodes>
+  <regnodes realName="do_cos_read_reg_1328">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="k_V_reg_1255">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="Mx_bits_V_reg_1249">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Result_58_reg_1193">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1273_3_reg_1375">
+    <nodeIds>94</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Result_65_reg_1437">
+    <nodeIds>109</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_V_reg_1244">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="t1_V_reg_1365">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <regnodes realName="targetBlock_reg_1453">
+    <nodeIds>115</nodeIds>
+  </regnodes>
+  <regnodes realName="second_order_float_sin_cos_K0_V_addr_reg_1340">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln1494_reg_1239">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="Ex_V_3_reg_1283">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_13_reg_1422">
+    <nodeIds>106</nodeIds>
+  </regnodes>
+  <regnodes realName="cos_basis_reg_1334">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="Mx_bits_V_3_reg_1260">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="in_shift_V_1_cast_loc_reg_1169">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1653_reg_1448">
+    <nodeIds>125</nodeIds>
+  </regnodes>
+  <regnodes realName="second_order_float_sin_cos_K1_V_load_reg_1370">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="c_0_023_loc_reg_1187">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="rhs_16_reg_1391">
+    <nodeIds>91</nodeIds>
+  </regnodes>
+  <regnodes realName="shift_1_loc_reg_1163">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln818_reg_1360">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1270_reg_1406">
+    <nodeIds>102</nodeIds>
+  </regnodes>
+  <regnodes realName="B_reg_1312">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="Mx_zeros_reg_1265">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="results_sign_V_3_reg_1355">
+    <nodeIds>143</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1019_reg_1298">
+    <nodeIds>135</nodeIds>
+  </regnodes>
+  <regnodes realName="second_order_float_sin_cos_K1_V_addr_reg_1345">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="result_V_reg_1416">
+    <nodeIds>105</nodeIds>
+  </regnodes>
+  <expressionNodes realName="xor_ln271_fu_654">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1488_fu_583">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="B_squared_fu_791">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="closepath_fu_313">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_67_fu_1130">
+    <nodeIds>155</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="op_assign_fu_487">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln288_fu_1058">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_33_fu_882">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln10_loc_fu_180">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_14_fu_930">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_417">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln329_fu_998">
+    <nodeIds>121</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cos_basis_fu_660">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Mx_bits_V_fu_397">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln186_fu_975">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="second_order_float_sin_cos_K1_V_addr_gep_fu_242">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_V_fu_287">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_34_fu_892">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln311_fu_1065">
+    <nodeIds>144</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1512_fu_580">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1019_1_fu_356">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1273_3_fu_814">
+    <nodeIds>94</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Ex_V_4_fu_969">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1019_2_fu_575">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="din_exp_V_fu_299">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln813_7_fu_879">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_42_fu_1014">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln311_fu_1072">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_1054">
+    <nodeIds>130</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_13_fu_920">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="t1_V_fu_804">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_49_fu_465">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1494_fu_388">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_shift_V_1_cast_loc_fu_188">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Mx_bits_V_3_fu_440">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_fu_523">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln318_1_fu_1047">
+    <nodeIds>129</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Ex_V_3_fu_538">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sin_basis_fu_668">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_65_fu_948">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shift_loc_fu_192">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln930_fu_362">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Med_V_fu_371">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shift_1_loc_fu_184">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln482_fu_504">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_44_fu_1037">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln300_fu_818">
+    <nodeIds>137</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_sign_V_2_fu_827">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln329_fu_1004">
+    <nodeIds>122</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln214_fu_323">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="B_trunc_fu_619">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_59_fu_319">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ush_fu_562">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln541_fu_683">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_0_023_loc_fu_200">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="newexp_fu_1008">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_sig_V_fu_1122">
+    <nodeIds>154</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln628_fu_352">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln541_1_fu_347">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_11_fu_447">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_12_fu_609">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="din_sig_V_fu_309">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln300_fu_1114">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln300_3_fu_1102">
+    <nodeIds>151</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln300_fu_1110">
+    <nodeIds>152</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln1454_fu_592">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln300_fu_1096">
+    <nodeIds>150</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_15_fu_696">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Mx_V_fu_528">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln841_fu_517">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1273_fu_842">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_sign_V_4_fu_832">
+    <nodeIds>147</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_sign_V_fu_772">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln311_fu_780">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_16_fu_734">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1347_fu_888">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1271_1_fu_839">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="second_order_float_sin_cos_K2_V_addr_gep_fu_255">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_exp_V_1_fu_1077">
+    <nodeIds>146</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_66_fu_690">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1271_fu_629">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln818_fu_800">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_1_022_loc_fu_196">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_63_fu_676">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_V_fu_910">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln1027_fu_424">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1273_fu_901">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln_fu_337">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1513_fu_598">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_633">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1019_fu_570">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_38_fu_365">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_sign_V_3_fu_785">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="B_fu_605">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rhs_1_fu_867">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="rhs_16_fu_851">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Mx_bits_V_1_fu_435">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_43_fu_1027">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_60_fu_381">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1653_fu_964">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="isNeg_fu_548">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ref_4oPi_table_100_V_addr_gep_fu_216">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Mx_zeros_fu_495">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln813_fu_876">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln1512_fu_556">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_64_fu_940">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="addr_V_fu_329">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="second_order_float_sin_cos_K0_V_addr_gep_fu_229">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Mx_V_1_fu_861">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln307_fu_822">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln318_fu_991">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_33_fu_845">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln300_1_fu_1092">
+    <nodeIds>149</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_58_fu_291">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln356_fu_1139">
+    <nodeIds>156</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="results_exp_V_fu_1085">
+    <nodeIds>148</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln1488_fu_586">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Ex_V_fu_499">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_62_fu_475">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1270_fu_898">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1535_fu_544">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1454_fu_520">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_V_1_fu_511">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_61_fu_457">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln335_fu_1022">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_429">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1198_fu_483">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_V_fu_407">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_392">
+    <nodeIds>36</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_904">
+    <nodeIds>104</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sin_or_cos_float_Pipeline_1_fu_268">
+    <nodeIds>110</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_1143">
+    <nodeIds>77</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sin_or_cos_float_Pipeline_2_fu_276">
+    <nodeIds>115</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_1150">
+    <nodeIds>95</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="c_1_022_loc_load_load_fu_960">
+    <nodeIds>112</nodeIds>
+  </ioNodes>
+  <ioNodes realName="trunc_ln10_loc_load_load_fu_988">
+    <nodeIds>119</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_shift_V_1_cast_loc_load_load_fu_982">
+    <nodeIds>117</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_0_023_loc_load_load_fu_956">
+    <nodeIds>111</nodeIds>
+  </ioNodes>
+  <ioNodes realName="t_in_read_read_fu_204">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="shift_loc_load_load_fu_979">
+    <nodeIds>116</nodeIds>
+  </ioNodes>
+  <ioNodes realName="do_cos_read_read_fu_210">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="shift_1_loc_load_load_fu_985">
+    <nodeIds>118</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="ref_4oPi_table_100_V">
+    <nodeIds>30</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_cos_K0_V">
+    <nodeIds>84</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_cos_K1_V">
+    <nodeIds>88</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="second_order_float_sin_cos_K2_V">
+    <nodeIds>93</nodeIds>
+  </memoryPorts>
+  <ioPorts name="do_cos">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="t_in">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>157</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="2" latency="2"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="30" stage="1" latency="2"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="5" latency="5"/>
+    </states>
+    <states id="4">
+      <operations id="36" stage="4" latency="5"/>
+    </states>
+    <states id="5">
+      <operations id="36" stage="3" latency="5"/>
+    </states>
+    <states id="6">
+      <operations id="36" stage="2" latency="5"/>
+    </states>
+    <states id="7">
+      <operations id="36" stage="1" latency="5"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="4" latency="4"/>
+    </states>
+    <states id="11">
+      <operations id="77" stage="3" latency="4"/>
+    </states>
+    <states id="12">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="77" stage="2" latency="4"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="2" latency="2"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="2" latency="2"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="2" latency="2"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="77" stage="1" latency="4"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="2"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="2"/>
+      <operations id="93" stage="1" latency="2"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="4" latency="4"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="147" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="95" stage="3" latency="4"/>
+    </states>
+    <states id="15">
+      <operations id="95" stage="2" latency="4"/>
+    </states>
+    <states id="16">
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="4"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+    </states>
+    <states id="17">
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="2" latency="2"/>
+    </states>
+    <states id="18">
+      <operations id="104" stage="1" latency="2"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+    </states>
+    <states id="19">
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="2" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="110" stage="1" latency="2"/>
+    </states>
+    <states id="21">
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="115" stage="2" latency="2"/>
+      <operations id="125" stage="1" latency="1"/>
+    </states>
+    <states id="22">
+      <operations id="115" stage="1" latency="2"/>
+    </states>
+    <states id="23">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="1"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+      <operations id="155" stage="1" latency="1"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="157" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sin_or_cos_float_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="30" mMaxLatency="31">
+      <basicBlocks>158</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,679 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
+| Date         : Tue Jul 18 19:10:55 2023
+| Host         : LAPTOP-KMQA6IKR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'threed_render_hw_threed_render_hls_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of threed_render_hw_threed_render_hls_0_0 (xilinx.com:hls:threed_render_hls:1.0) from (Rev. 2113123227) to (Rev. 2113124227)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
+| Date         : Tue Jul 18 02:29:53 2023
+| Host         : LAPTOP-KMQA6IKR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'threed_render_hw_threed_render_hls_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of threed_render_hw_threed_render_hls_0_0 (xilinx.com:hls:threed_render_hls:1.0) from (Rev. 2113123172) to (Rev. 2113123227)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
+| Date         : Tue Jul 18 01:33:05 2023
+| Host         : LAPTOP-KMQA6IKR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'threed_render_hw_threed_render_hls_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of threed_render_hw_threed_render_hls_0_0 (xilinx.com:hls:threed_render_hls:1.0) from (Rev. 2113123162) to (Rev. 2113123172)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'threed_render_hw_threed_render_hls_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_threed_render_hls_control'
+
+-Upgrade has added interface 'm_axi_gmem' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 's_axi_control' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'threed_render_hw_threed_render_hls_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARADDR'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARBURST'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARCACHE'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARLEN'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARLOCK'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARPROT'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARQOS'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARREADY'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARREGION'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARSIZE'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_ARVALID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWADDR'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWBURST'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWCACHE'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWLEN'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWLOCK'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWPROT'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWQOS'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWREADY'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWREGION'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWSIZE'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_AWVALID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_BID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_BREADY'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_BRESP'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_BVALID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_RDATA'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_RID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_RLAST'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_RREADY'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_RRESP'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_RVALID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_WDATA'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_WID'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_WLAST'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_WREADY'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_WSTRB'
+
+-Upgrade has removed port 'm_axi_threed_render_hls_control_WVALID'
+
+-Upgrade has added port 'm_axi_gmem_ARADDR'
+
+-Upgrade has added port 'm_axi_gmem_ARBURST'
+
+-Upgrade has added port 'm_axi_gmem_ARCACHE'
+
+-Upgrade has added port 'm_axi_gmem_ARID'
+
+-Upgrade has added port 'm_axi_gmem_ARLEN'
+
+-Upgrade has added port 'm_axi_gmem_ARLOCK'
+
+-Upgrade has added port 'm_axi_gmem_ARPROT'
+
+-Upgrade has added port 'm_axi_gmem_ARQOS'
+
+-Upgrade has added port 'm_axi_gmem_ARREADY'
+
+-Upgrade has added port 'm_axi_gmem_ARREGION'
+
+-Upgrade has added port 'm_axi_gmem_ARSIZE'
+
+-Upgrade has added port 'm_axi_gmem_ARVALID'
+
+-Upgrade has added port 'm_axi_gmem_AWADDR'
+
+-Upgrade has added port 'm_axi_gmem_AWBURST'
+
+-Upgrade has added port 'm_axi_gmem_AWCACHE'
+
+-Upgrade has added port 'm_axi_gmem_AWID'
+
+-Upgrade has added port 'm_axi_gmem_AWLEN'
+
+-Upgrade has added port 'm_axi_gmem_AWLOCK'
+
+-Upgrade has added port 'm_axi_gmem_AWPROT'
+
+-Upgrade has added port 'm_axi_gmem_AWQOS'
+
+-Upgrade has added port 'm_axi_gmem_AWREADY'
+
+-Upgrade has added port 'm_axi_gmem_AWREGION'
+
+-Upgrade has added port 'm_axi_gmem_AWSIZE'
+
+-Upgrade has added port 'm_axi_gmem_AWVALID'
+
+-Upgrade has added port 'm_axi_gmem_BID'
+
+-Upgrade has added port 'm_axi_gmem_BREADY'
+
+-Upgrade has added port 'm_axi_gmem_BRESP'
+
+-Upgrade has added port 'm_axi_gmem_BVALID'
+
+-Upgrade has added port 'm_axi_gmem_RDATA'
+
+-Upgrade has added port 'm_axi_gmem_RID'
+
+-Upgrade has added port 'm_axi_gmem_RLAST'
+
+-Upgrade has added port 'm_axi_gmem_RREADY'
+
+-Upgrade has added port 'm_axi_gmem_RRESP'
+
+-Upgrade has added port 'm_axi_gmem_RVALID'
+
+-Upgrade has added port 'm_axi_gmem_WDATA'
+
+-Upgrade has added port 'm_axi_gmem_WID'
+
+-Upgrade has added port 'm_axi_gmem_WLAST'
+
+-Upgrade has added port 'm_axi_gmem_WREADY'
+
+-Upgrade has added port 'm_axi_gmem_WSTRB'
+
+-Upgrade has added port 'm_axi_gmem_WVALID'
+
+-Upgrade has added port 's_axi_control_ARADDR'
+
+-Upgrade has added port 's_axi_control_ARREADY'
+
+-Upgrade has added port 's_axi_control_ARVALID'
+
+-Upgrade has added port 's_axi_control_AWADDR'
+
+-Upgrade has added port 's_axi_control_AWREADY'
+
+-Upgrade has added port 's_axi_control_AWVALID'
+
+-Upgrade has added port 's_axi_control_BREADY'
+
+-Upgrade has added port 's_axi_control_BRESP'
+
+-Upgrade has added port 's_axi_control_BVALID'
+
+-Upgrade has added port 's_axi_control_RDATA'
+
+-Upgrade has added port 's_axi_control_RREADY'
+
+-Upgrade has added port 's_axi_control_RRESP'
+
+-Upgrade has added port 's_axi_control_RVALID'
+
+-Upgrade has added port 's_axi_control_WDATA'
+
+-Upgrade has added port 's_axi_control_WREADY'
+
+-Upgrade has added port 's_axi_control_WSTRB'
+
+-Upgrade has added port 's_axi_control_WVALID'
+
+
+4. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'threed_render_hw_threed_render_hls_0_0'. These changes may impact your design.
+
+
+-Upgrade has added address block 's_axi_control/Reg'
+
+-Upgrade has removed address space 'Data_m_axi_threed_render_hls_control'
+
+-Upgrade has added address space 'Data_m_axi_gmem'
+
+
+5. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to 'true'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_ID_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_DATA_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_AWUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_WUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_BUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_ARUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_RUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_USER_VALUE' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_PROT_VALUE' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_THREED_RENDER_HLS_CONTROL_CACHE_VALUE' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '"0011"'
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:threed_render_hls:1.0 -user_name threed_render_hw_threed_render_hls_0_0
+set_property -dict "\
+  CONFIG.Component_Name {threed_render_hw_threed_render_hls_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_threed_render_hls_io:m_axi_threed_render_hls_control} \
+  CONFIG.ap_clk.ASSOCIATED_PORT {} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {} \
+  CONFIG.ap_clk.FREQ_HZ {100000000} \
+  CONFIG.ap_clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.ap_clk.INSERT_VIP {0} \
+  CONFIG.ap_clk.PHASE {0.0} \
+  CONFIG.ap_rst_n.INSERT_VIP {0} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {510} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_threed_render_hls_io.ADDR_WIDTH {7} \
+  CONFIG.s_axi_threed_render_hls_io.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.BUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.CLK_DOMAIN {} \
+  CONFIG.s_axi_threed_render_hls_io.DATA_WIDTH {32} \
+  CONFIG.s_axi_threed_render_hls_io.FREQ_HZ {100000000} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_BRESP {1} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_BURST {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_CACHE {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_LOCK {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_PROT {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_QOS {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_REGION {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_RRESP {1} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_WSTRB {1} \
+  CONFIG.s_axi_threed_render_hls_io.ID_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.INSERT_VIP {0} \
+  CONFIG.s_axi_threed_render_hls_io.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_threed_render_hls_io.PHASE {0.0} \
+  CONFIG.s_axi_threed_render_hls_io.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_threed_render_hls_io.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_threed_render_hls_io.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_threed_render_hls_io.RUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_threed_render_hls_io.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_threed_render_hls_io.WUSER_WIDTH {0} " [get_ips threed_render_hw_threed_render_hls_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
+| Date         : Tue Jul 18 01:25:47 2023
+| Host         : LAPTOP-KMQA6IKR running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'threed_render_hw_threed_render_hls_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of threed_render_hw_threed_render_hls_0_0 (xilinx.com:hls:threed_render_hls:1.0) from (Rev. 2113122900) to (Rev. 2113123162)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'threed_render_hw_threed_render_hls_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_gmem'
+
+-Upgrade has added interface 'm_axi_threed_render_hls_control' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'threed_render_hw_threed_render_hls_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'm_axi_gmem_ARADDR'
+
+-Upgrade has removed port 'm_axi_gmem_ARBURST'
+
+-Upgrade has removed port 'm_axi_gmem_ARCACHE'
+
+-Upgrade has removed port 'm_axi_gmem_ARID'
+
+-Upgrade has removed port 'm_axi_gmem_ARLEN'
+
+-Upgrade has removed port 'm_axi_gmem_ARLOCK'
+
+-Upgrade has removed port 'm_axi_gmem_ARPROT'
+
+-Upgrade has removed port 'm_axi_gmem_ARQOS'
+
+-Upgrade has removed port 'm_axi_gmem_ARREADY'
+
+-Upgrade has removed port 'm_axi_gmem_ARREGION'
+
+-Upgrade has removed port 'm_axi_gmem_ARSIZE'
+
+-Upgrade has removed port 'm_axi_gmem_ARVALID'
+
+-Upgrade has removed port 'm_axi_gmem_AWADDR'
+
+-Upgrade has removed port 'm_axi_gmem_AWBURST'
+
+-Upgrade has removed port 'm_axi_gmem_AWCACHE'
+
+-Upgrade has removed port 'm_axi_gmem_AWID'
+
+-Upgrade has removed port 'm_axi_gmem_AWLEN'
+
+-Upgrade has removed port 'm_axi_gmem_AWLOCK'
+
+-Upgrade has removed port 'm_axi_gmem_AWPROT'
+
+-Upgrade has removed port 'm_axi_gmem_AWQOS'
+
+-Upgrade has removed port 'm_axi_gmem_AWREADY'
+
+-Upgrade has removed port 'm_axi_gmem_AWREGION'
+
+-Upgrade has removed port 'm_axi_gmem_AWSIZE'
+
+-Upgrade has removed port 'm_axi_gmem_AWVALID'
+
+-Upgrade has removed port 'm_axi_gmem_BID'
+
+-Upgrade has removed port 'm_axi_gmem_BREADY'
+
+-Upgrade has removed port 'm_axi_gmem_BRESP'
+
+-Upgrade has removed port 'm_axi_gmem_BVALID'
+
+-Upgrade has removed port 'm_axi_gmem_RDATA'
+
+-Upgrade has removed port 'm_axi_gmem_RID'
+
+-Upgrade has removed port 'm_axi_gmem_RLAST'
+
+-Upgrade has removed port 'm_axi_gmem_RREADY'
+
+-Upgrade has removed port 'm_axi_gmem_RRESP'
+
+-Upgrade has removed port 'm_axi_gmem_RVALID'
+
+-Upgrade has removed port 'm_axi_gmem_WDATA'
+
+-Upgrade has removed port 'm_axi_gmem_WID'
+
+-Upgrade has removed port 'm_axi_gmem_WLAST'
+
+-Upgrade has removed port 'm_axi_gmem_WREADY'
+
+-Upgrade has removed port 'm_axi_gmem_WSTRB'
+
+-Upgrade has removed port 'm_axi_gmem_WVALID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARADDR'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARBURST'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARCACHE'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARLEN'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARLOCK'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARPROT'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARQOS'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARREADY'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARREGION'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARSIZE'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_ARVALID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWADDR'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWBURST'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWCACHE'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWLEN'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWLOCK'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWPROT'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWQOS'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWREADY'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWREGION'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWSIZE'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_AWVALID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_BID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_BREADY'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_BRESP'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_BVALID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_RDATA'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_RID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_RLAST'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_RREADY'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_RRESP'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_RVALID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_WDATA'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_WID'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_WLAST'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_WREADY'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_WSTRB'
+
+-Upgrade has added port 'm_axi_threed_render_hls_control_WVALID'
+
+
+4. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'threed_render_hw_threed_render_hls_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed address space 'Data_m_axi_gmem'
+
+-Upgrade has added address space 'Data_m_axi_threed_render_hls_control'
+
+
+5. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_GMEM_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to 'true'
+
+Parameter 'C_M_AXI_GMEM_ID_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_DATA_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_GMEM_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_GMEM_AWUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_WUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_BUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_ARUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_RUSER_WIDTH' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_USER_VALUE' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_GMEM_PROT_VALUE' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_GMEM_CACHE_VALUE' is no longer present on the upgraded IP 'threed_render_hw_threed_render_hls_0_0', and cannot be set to '"0011"'
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:threed_render_hls:1.0 -user_name threed_render_hw_threed_render_hls_0_0
+set_property -dict "\
+  CONFIG.Component_Name {threed_render_hw_threed_render_hls_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_threed_render_hls_io:m_axi_gmem} \
+  CONFIG.ap_clk.ASSOCIATED_PORT {} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {threed_render_hw_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.ap_clk.FREQ_HZ {100000000} \
+  CONFIG.ap_clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.ap_clk.INSERT_VIP {0} \
+  CONFIG.ap_clk.PHASE {0.0} \
+  CONFIG.ap_rst_n.INSERT_VIP {0} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {510} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_threed_render_hls_io.ADDR_WIDTH {7} \
+  CONFIG.s_axi_threed_render_hls_io.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.BUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.CLK_DOMAIN {threed_render_hw_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.s_axi_threed_render_hls_io.DATA_WIDTH {32} \
+  CONFIG.s_axi_threed_render_hls_io.FREQ_HZ {100000000} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_BRESP {1} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_BURST {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_CACHE {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_LOCK {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_PROT {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_QOS {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_REGION {0} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_RRESP {1} \
+  CONFIG.s_axi_threed_render_hls_io.HAS_WSTRB {1} \
+  CONFIG.s_axi_threed_render_hls_io.ID_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.INSERT_VIP {0} \
+  CONFIG.s_axi_threed_render_hls_io.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_READ_THREADS {4} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_threed_render_hls_io.NUM_WRITE_THREADS {4} \
+  CONFIG.s_axi_threed_render_hls_io.PHASE {0.0} \
+  CONFIG.s_axi_threed_render_hls_io.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_threed_render_hls_io.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_threed_render_hls_io.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_threed_render_hls_io.RUSER_WIDTH {0} \
+  CONFIG.s_axi_threed_render_hls_io.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_threed_render_hls_io.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_threed_render_hls_io.WUSER_WIDTH {0} " [get_ips threed_render_hw_threed_render_hls_0_0]
+
+

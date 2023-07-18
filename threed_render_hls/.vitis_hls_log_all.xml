@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:12:17.145+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'matrix_mutiply.2' to 'matrix_mutiply_2'." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:56.667+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'matrix_mutiply.1' to 'matrix_mutiply_1'." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:56.580+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;float>' to 'sin_or_cos_float_s'." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:56.525+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;float>_Pipeline_2' to 'sin_or_cos_float_Pipeline_2'." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:56.467+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;float>_Pipeline_1' to 'sin_or_cos_float_Pipeline_1'." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:56.404+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] E:/User/app/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1102: variable-indexed range selection may cause suboptimal QoR." projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:50.569+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (C:\scratch\2022.2.2\hls_product\139\2022.2.2\src\shared\hls\clib/include/header_files\ap_int_base.h:552:88)" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:11:47.451+0800" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fsqrt_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:44:44.466+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fpext_32ns_64_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:44:41.475+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:44:37.463+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T18:44:31.452+0800" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fsqrt_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T19:08:18.104+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fpext_32ns_64_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T19:08:14.080+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T19:08:10.063+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'threed_render_hls_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="threed_render_hls" solutionName="solution1" date="2023-07-18T19:08:04.046+0800" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

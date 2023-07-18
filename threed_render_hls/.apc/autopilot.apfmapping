@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="threed_render_hls.cpp" path="E:\fpga\fpgacamp2023\threed_render\src\threed_render_hls.cpp"/>
+    <originFiles name="threed_render_hls.hpp" path="E:\fpga\fpgacamp2023\threed_render\src\threed_render_hls.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="threed_render_hls_tb.cpp" path="E:\fpga\fpgacamp2023\threed_render\src\threed_render_hls_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

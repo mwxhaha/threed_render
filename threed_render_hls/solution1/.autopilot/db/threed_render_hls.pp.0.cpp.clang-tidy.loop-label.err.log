@@ -1,0 +1,3 @@
+26 errors generated.
+Error while processing E:\fpga\fpgacamp2023\threed_render\threed_render_hls\solution1\.autopilot\db\threed_render_hls.pp.0.cpp.
+clang-tidy applied 130 of 130 suggested fixes.

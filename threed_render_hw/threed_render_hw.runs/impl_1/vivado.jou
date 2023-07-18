@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Tue Jul 18 19:24:47 2023
+# Process ID: 50712
+# Current directory: E:/fpga/fpgacamp2023/threed_render/threed_render_hw/threed_render_hw.runs/impl_1
+# Command line: vivado.exe -log threed_render_hw_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source threed_render_hw_wrapper.tcl -notrace
+# Log file: E:/fpga/fpgacamp2023/threed_render/threed_render_hw/threed_render_hw.runs/impl_1/threed_render_hw_wrapper.vdi
+# Journal file: E:/fpga/fpgacamp2023/threed_render/threed_render_hw/threed_render_hw.runs/impl_1\vivado.jou
+# Running On: LAPTOP-KMQA6IKR, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16800 MB
+#-----------------------------------------------------------
+source threed_render_hw_wrapper.tcl -notrace

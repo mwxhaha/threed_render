@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# xsim v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Tue Jul 18 18:45:19 2023
+# Process ID: 33108
+# Current directory: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/threed_render_hls/xsim_script.tcl}
+# Log file: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog/xsim.log
+# Journal file: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog\xsim.jou
+# Running On: LAPTOP-KMQA6IKR, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16800 MB
+#-----------------------------------------------------------
+source xsim.dir/threed_render_hls/xsim_script.tcl
+source threed_render_hls.tcl

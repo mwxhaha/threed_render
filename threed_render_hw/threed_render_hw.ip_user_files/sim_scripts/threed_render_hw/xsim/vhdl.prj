@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../threed_render_hw.gen/sources_1/bd/threed_render_hw/ip/threed_render_hw_rst_ps7_0_100M_0/sim/threed_render_hw_rst_ps7_0_100M_0.vhd" \
+
+nosort

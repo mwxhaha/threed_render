@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Tue Jul 18 18:45:19 2023
+# Process ID: 33108
+# Current directory: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/threed_render_hls/xsim_script.tcl}
+# Log file: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog/xsim.log
+# Journal file: E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog\xsim.jou
+# Running On: LAPTOP-KMQA6IKR, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16800 MB
+#-----------------------------------------------------------
+source xsim.dir/threed_render_hls/xsim_script.tcl
+# xsim {threed_render_hls} -autoloadwcfg -tclbatch {threed_render_hls.tcl}
+Time resolution is 1 ps
+source threed_render_hls.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "73250655000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 73250715 ns : File "E:/fpga/fpgacamp2023/threed_render/threed_render_hls/solution1/sim/verilog/threed_render_hls.autotb.v" Line 525
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:20:27 . Memory (MB): peak = 266.707 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 60272 KB (Peak: 60272 KB), Simulation CPU Usage: 1218218 ms
+INFO: [Common 17-206] Exiting xsim at Tue Jul 18 19:05:48 2023...
